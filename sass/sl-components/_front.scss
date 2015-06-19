@@ -1,128 +1,60 @@
-/* CSS code for panel page two cols two rows
-** PANEL page
-** Two column criscom
+/* CSS code for frontpage
+** VIEWS page
+** Blocks added in context module
 ** added by criscom
 ** /front
 **
 */
 
-.front {
-    .panel-2col {
-        @include breakpoint($range769-1044) {
-            margin-top: 24px;
-            margin-top: 1.5rem;
-        }
-    }
-    .pane-title {
-        text-align: center;
-        margin-bottom: 24px !important;
-        margin-bottom: 1.5rem !important;
-    }
-    .center-wrapper.one {
-        .panel-panel {
-            @include clearfix;
-            @extend %white-space;
-        }
-        .panel-col-first {
-            .panel-pane {
-                float: left;
-                width: 49%;
-                @include breakpoint($iphone5-6)
-                {
-                    float: none;
-                    width: 100%;
-                }
-            }
-            .pane-block {
-                margin-left: 2%;
-                background-color: $header-color;
-                @include border-radius(4px);
-                @include breakpoint($iphone5-6)
-                    {
-                    float: none;
-                    width: 100%;
-                    margin-left: 0 !important;
-                    }
-            }
-        }
-    }
+
+.front .main-content {
+    text-align: center;
 }
 
-// flexslider
-
-// flexslider takes a long time to load
-// fix from: https://stackoverflow.com/questions/12717097/flexslider-slow-image-load/12727900#12727900
-
-.flexslider .slides > li:not(:first-child) {display: none; -webkit-backface-visibility: hidden;}
-
-
-.front {
-    .flexslider {
-        background: transparent;
-        h2 {
-            margin-bottom: 24px !important;
-            margin-bottom: 1.5rem !important;
-            text-align: center;
-        }
-        img {
-            @include border-radius(4px);
-            margin-bottom: 24px !important;
-            margin-bottom: 1.5rem !important;
-        }
-        .miete-wrapper {
-            margin-bottom: 24px;
-            margin-bottom: 24px;
-        }
-        .miete-label, .miete {
-            @extend %medium-font-weight;
-        }
-        .wohnungsdetails-link {
-            margin: 24px 0;
-            margin: 1.5rem 0;
-        }
-        .padding-front {
-            padding: 0 16px;
-            padding: 0 1rem;
-        }
-    }
+.view-google-doodle {
+    margin-top: 71px;
+    margin-top: 4.4375rem;
 }
 
-
 .front {
-    .field-name-field-image {
-        img {
-            @include border-radius(4px);
-            }
+    .block-search-api-page {
+        // margin-top: 6px;
     }
-    .center-wrapper.two {
-        @include clearfix;
-        .panel-col-first {
-            width: 49%;
-            @include breakpoint($iphone5-6)
-            {
-                width: 100%;
-            }
+    div.form-item-keys-1 {
+        margin-top: 25px;
+        margin-top: 1.5625rem;
+        margin-bottom: 16px;
+        margin-bottom: 1rem;
+    }
+    input.form-text {
+        width: 570px;
+        height: 30px;
+        outline: none;
+        &:focus {
+            outline: none;
+            border: 1px solid rgb(67, 135, 253);
         }
-        .panel-col-last {
-            width: 49%;
-            margin-left: 2%;
-            @include breakpoint($iphone5-6)
-            {
-                width: 100%;
-                margin-left: 0;
-            }
+    }
+    input[type="submit"] {
+        &:hover {
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        border: 1px solid #c6c6c6;
+        color: #222;
         }
-        .node {
-            margin-bottom: 0;
-            border: 0;
-            .field-name-body {
-                a.more-link {
-                    display: block;
-                    text-align: left;
-                    margin-top: 16px;
-                    margin-top: 1rem;
-                }
-            }
+    }
+    .block-search-api-page {
+        .btn-primary {
+            border: 1px solid rgba(0,0,0,0.1);
+            color: #444;
+            @include border-radius(2px);
+            height: 29px;
+            line-height: 27px;
+            padding: 0 8px;
+            margin: 0 8px;
+            @include background-image(linear-gradient(top, rgb(245,245,245), rgb(241,241,241)));
+            font-size: 11px;
+            font-weight: bold;
+            color: rgb(68,68,68);
         }
     }
 }

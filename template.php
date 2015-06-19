@@ -24,6 +24,23 @@ function master2015_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
+function master2015_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_api_page_search_form_home') {
+  
+    unset($form['search_api_page_search_form_home']['#title']);
+    
+    $form['keys_1']['#title_display'] = 'invisible';
+    $form_default = t('');
+    $form['keys_1']['#default_value'] = $form_default;
+    // $form['submit_1'] = array('#type' => 'image_button', '#src' => base_path() . drupal_get_path('theme', 'einstern_2014') . '/images/search_icon.png', '#alt' => 'search', '#prefix' => '<div class="form-actions">', '#suffix' => '</div>');
+    $form['keys_1']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}" );
+    // $form['submit_1'] = array('#prefix' => '<div class="form-actions criscom">', '#suffix' => '</div>');
+    $form['submit_1']['#value'] = t('Google Search'); // Change the text on the submit button
+    $form['submit_2']['#value'] = t('I am feeling lucky');
+    // dpm($form);
+  }
+}
+
 
 /**
  * Override or insert variables into the maintenance page template.

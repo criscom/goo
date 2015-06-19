@@ -9,6 +9,7 @@ body {
     @extend %base-font-size;
     @extend %base-font-weight;
     color: $font-color;
+    font-family: $font-body;
 }
 
 // All paragraphs with the 'p' tag

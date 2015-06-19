@@ -12,6 +12,9 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function($) {
 
+    /* duplicate the search button on the front page */
+    
+
 /* START: SMARTMENUS */
 
     // initialise smartmenus for main menu
@@ -23,24 +26,8 @@
 
     // add btn class to isotope filter lists for all views
     $(document).ready(function() {
-        $('ul.isotope-filters li>a').addClass('isotope-button'); // add a class to the button links
-
-/* START: Isotope settings for the "Busreisen" view let's set the filter to "Busreisen" and assign the class "selected" to the "Busreisen" button */
-        // Pre-select second option "Busreisen" in option sets.
-
-/*
-        $('.view-display-id-page_2 .isotope-options .option-set li:first-child a').removeClass('selected');
-        $('.view-display-id-page_2 .isotope-options .option-set li:nth-child(2) a').addClass('selected');
-        // for the Busreisen view set the initial filter to "Busreisen"
-        $('.view-display-id-page_2 #isotope-container').isotope({
-        // options...
-        filter: '.busreisen'
-        }); 
-*/
-
-/* END: Isotope settings for the "Busreisen" view */
-
-/* END: ISOTOPE */
+        // $('ul.isotope-filters li>a').addClass('isotope-button'); // add a class to the button links
+        $( '<input type="submit" id="edit-submit-2" name="op" value="I am feeling lucky!" class="btn-primary btn form-submit">' ).insertAfter( ".front #search-api-page-search-form-home .form-submit" );
     });
 })(jQuery);
 
