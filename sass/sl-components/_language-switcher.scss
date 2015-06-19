@@ -1,0 +1,54 @@
+/* CSS code for the language switcher
+** added by criscom
+** on all pages
+*/
+
+.locale-untranslated {
+    color: white;
+}
+
+ul.language-switcher-locale-url
+{
+    @include no-bullets;
+    li
+    {
+        display: inline;
+        &.first:after
+        {
+            content: ' | ';
+
+            color: white;
+        }
+        a
+        {
+            text-decoration: none;
+
+            color: white;
+
+            @extend %base-font-size;
+            @extend %medium-font-weight;
+            @include link-colors($normal: white, $hover: $red, $active: $red);
+        }
+    }
+}
+
+.block-locale
+{
+    float: right;
+
+    @include breakpoint($max768)
+    {
+        background-color: $black;
+        ul.language-switcher-locale-url
+        {
+            margin: 0;
+            padding: 8px 4px;
+            padding: .5rem .25rem;
+        }
+    }
+    @include breakpoint($desktop) {
+        position: absolute;
+        top: 100px;
+        right: 0;
+    }
+}

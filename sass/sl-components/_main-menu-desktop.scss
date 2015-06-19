@@ -1,0 +1,115 @@
+/* CSS code for the main menu on desktop
+** added by criscom
+** NICE MENUS STYLING
+** on all pages
+** min-width: 768px
+** 
+*/
+
+// Hide responsive menu
+@include breakpoint($desktop)
+{
+    .responsive-menus
+    {
+        // display: none;
+    }
+}
+
+// Style nice menus
+
+ul.nice-menu
+{
+    // margin-top: 50px;
+}
+
+ul.nice-menu li
+{
+    border: 0;
+    background-color: transparent;
+    // background-color: white;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    @include breakpoint($range769-961) {
+        padding-bottom: 14px;
+    }
+    @include breakpoint($range769-876) {
+        padding-top: 12px;
+        padding-right: 0.75rem;
+
+    }
+
+    @include breakpoint($desktop)
+    {
+        padding-right: 8px;
+        padding-right: .5rem;
+        padding-left: 8px;
+        padding-left: .5rem;
+    }
+    @include breakpoint($range769-876) {
+        padding-right: 4px;
+        padding-right: .25rem;
+        padding-left: 4px;
+        padding-left: .25rem;
+    }
+
+    a
+    {
+        text-decoration: none;
+        // text-transform: uppercase;
+
+        @extend %base-font-size;
+        @include link-colors($normal: $black, $hover: $red!important);
+        @extend %base-font-weight;
+        // padding-right: 0 !important;
+        @include breakpoint($range769-961) {
+            font-size: 16px;
+            font-size: 1rem;
+        }
+        @include breakpoint($range769-876) {
+            font-size: 14px;
+            font-size: 0.875rem;
+        }
+    }
+    &.active-trail {
+        background-color: white !important;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        a
+            {
+            color: black;
+            &:hover {
+                color: black !important;
+            }
+            }
+    }
+}
+
+ul.nice-menu-down
+{
+    li.menuparent,
+    li.menuparent:hover
+    {
+        background-color: transparent;
+        background-image: none;
+    }
+}
+
+// secondary menus 
+
+ul.nice-menu ul
+{
+    top: 50px;
+    top: 3.125rem;
+
+    border-top: 0;
+    background-color: white;
+    li
+    {
+        a
+        {
+            text-decoration: none;
+
+            @include link-colors($normal: black, $hover: $red, $visited: black, $active: $red);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+/* CSS code for the footer region
+** added by criscom
+** 
+*/
+
+
+
+footer {
+    background-color: $header-color;
+    margin: 24px 0 16px 0;
+    margin: 1.5rem 0 1rem 0;
+    border-radius: 4px;
+    a {
+        @include link-colors($normal: #333 !important,
+            $hover: $brand-primary !important);
+       font-weight: 300 !important;
+    }
+}

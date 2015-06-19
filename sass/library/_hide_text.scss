@@ -1,0 +1,19 @@
+@mixin hide-text { // as of 04.03.2013 recommended approach to hide text and display an image. taken from: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+  border: 0; 
+  font: 0/0 a; 
+  text-shadow: none; 
+  color: transparent; 
+  background-color: transparent;
+}
+
+@mixin hide-text-standard { // hide text and display image instead. taken from: http://sachagreif.com/useful-sass-mixins/
+    overflow:hidden;
+    text-indent:-9999px;
+    display:block;
+}
+
+@mixin hide-text-outdated { // hide text alternative approach. taken from: http://nicolasgallagher.com/another-css-image-replacement-technique/
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}

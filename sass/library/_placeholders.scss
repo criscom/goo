@@ -1,0 +1,55 @@
+/* SASS placeholders
+** added by criscom
+** use the @extend directive to extend with placeholders
+*/
+
+%base-font-size
+{
+    font-size: 18px;
+    font-size: 1.125rem;
+}
+
+%base-font-weight {
+    font-weight: 300;
+}
+
+%medium-font-weight {
+    font-weight: 500;
+}
+
+%bold-font-weight {
+    font-weight: 700;
+}
+
+%base-background {
+    background-color: $breadcrumb-bg;
+    padding: 16px;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+%header-large
+{
+    // font-family: $oswald;
+    font-size: 44px;
+    font-size: 2.75 * $base-font-size;
+    font-weight: 700;
+}
+
+%divider { // creates a dark gray line to divide sections in a background area
+    padding-bottom: 16px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray-light;
+}
+
+%divider-node {
+    @extend %divider;
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+}
+
+%white-space {
+    margin-bottom: $white-space-px;
+    margin-bottom: $white-space-rem;
+}
+

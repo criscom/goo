@@ -1,0 +1,104 @@
+/* CSS code for panel page one col / two col
+** PANEL page
+** added by criscom
+** /panel-two-two
+** (Morocutti.at ==> Über uns)
+*/
+
+// link-less hover stylings for headers and titles see _fonts.scss
+
+// one col section above
+.center-wrapper.one
+{
+    @include clearfix;
+    h2
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .panel-panel
+    {
+        @extend %white-space;
+
+        @extend %base-background;
+        @include breakpoint($max979)
+        {
+            float: none;
+
+            width: 100%;
+        }
+        .group-left
+        {
+            width: 30%;
+            margin-right: 4%;
+            img {
+                @include border-radius(20px);
+            }
+        }
+        .group-right
+        {
+            width: 66%;
+        }
+    }
+}
+
+// two col section
+.center-wrapper.two
+{    
+    // Remove margin on top of headers in panes
+    .field-name-title-field h2,
+    // header of nodes in left group
+    h2.pane-title.pane__title
+    {
+        // header of panel in right group    
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .group-left {
+        width: 35%;
+    }
+    .group-right {
+        width: 65%;
+    }
+    .node
+    {
+        @extend %divider-node; // separates stacked nodes with a border
+        img {
+            @include border-radius(20px);
+        }
+    }
+    
+    .pane-node:nth-child(3) .node {
+        border: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .panel-col-first
+    {
+        width: 68%;
+
+        @extend %base-background;
+        @include breakpoint($iphone5-6)
+        {
+            width: 100%;
+        }
+        @include breakpoint($max768) {
+            margin-bottom: $white-space-px;
+            margin-bottom: $white-space-rem;
+    }
+    }
+    .panel-col-last
+    {
+        @include breakpoint($desktop) {
+            width: 30%;
+            margin-left: 2%;
+    }
+        @extend %base-background;
+        @include breakpoint($iphone5-6)
+        {
+            width: 100%;
+        }
+    }
+}
+

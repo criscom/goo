@@ -1,0 +1,184 @@
+// =============================================================================
+// Variables
+// =============================================================================
+
+
+//
+// Browser support
+//
+// Based on caniuse.com's browser usage stats, Compass will support any browser
+// that is used by at least 1 user in 10,000. These variables are used to
+// specify which browsers are supported by Compass. "Unsupported" browsers will
+// still see the generated CSS, of course, but will not get special treatment
+// for its bugs or CSS3 vendor prefixes.
+//
+
+// The browser usage threshold for features that cannot degrade gracefully.
+// A value of 100 means 100% of users would have to use the browser before it is
+// supported. A value of 0.01 (the default) means 1 user in 10,000.
+$critical-usage-threshold: 0.01;
+
+// Set this to true to generate comments that will explain why a prefix was
+// included or omitted.
+$debug-browser-support: false;
+
+// Optional map of minimum browser versions to support. If a specific browser
+// has usage stats below the $critical-usage-threshold, you can still require
+// support for it using this variable. For example, to require support for IE 6
+// and later, set $browser-minimum-versions['ie'] to '6'.
+$browser-minimum-versions: (
+  'chrome':  null,
+  'firefox': null,
+  'ie':      null,
+  'safari':  null,
+  'opera':   null
+);
+
+//
+// Border-box support for IE 6/7
+//
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) Set $critical-usage-threshold to a value high
+//   enough to drop IE7 users.
+// - Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
+//   (use px for both or use % for both) and set:
+//   $box-sizing: content-box;
+//
+
+
+//
+// Font faces, stacks and sizes.
+//
+
+// Set this to true to force normalize.scss output to exactly match normalize.css.
+$strict-normalize: false;
+
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+// The font size set on the root html element.
+$base-font-size:   16px;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px;
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$rhythm-unit: 'rem';
+
+// The font sizes for h1-h6.
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+// The following font family declarations use widely available fonts.
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// Serif font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+// Sans-serif font stacks.
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+// Monospace font stacks.
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables using the font stacks we want on this site.
+$font-body:       $verdana;
+$font-monospace:  $courier;
+
+// The font family set on the html element.
+$base-font-family:  $font-body;
+
+// divider margins // white space below backgraound areas in order to divide background areas
+$white-space-px: 24px;
+$white-space-rem: 1.5rem;
+
+//
+// Colors
+//
+
+$yellow: rgb(255,255,0);
+$red: rgb(255,0,0);
+$logo: rgb(34,68,85); // #224455;
+$black: rgb(64,64,64); // #404040 // #231f20;
+$box: rgb(187,187,187); //#bbbbbb; // rgb(212,212,212); // #d4d4d4;
+$border: rgb(153,153,153); //#999999;
+$font-color: $black;
+$label-color: $font-color;
+$header-color: transparent;
+$menu-color: $box;
+
+
+//
+// Breakpoints
+//
+
+// Standard min
+$mobile: min-width 0px;
+$tablet: min-width 569px;
+$desktop: min-width 769px;
+$large: min-width 980px;
+$xlarge: min-width 1200px;
+$xxlarge: min-width 1500px;
+
+// Helper max
+$max979: max-width 979px; // smallscreens
+$max768: max-width 768px; // mobilescreens
+$max568: max-width 568px;
+
+// Ranges
+$range980-1199: 980px 1199px;
+$range769-1044: 769px 1044px;
+$range769-876: 769px 876px;
+$range769-979: 769px 979px;
+$range769-961: 769px 961px;
+$range569-768: 569px 768px;
+$range481-568: 481px 568px;
+$range0-480: 0px 480px;
+$range0-568px: 0px 568px;
+
+//iPhone
+$iphone5-6: max-width 767px;
+$iphone5: max-width 568px;
+$iphone6: 375px 667px;
+$iphone6plus: 414px 736px;
+$iphone4landscape: max-width 480px;
+
+
+
+
+
+//
+// Misc
+//
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 2 * $base-font-size;
+
+// The height of the navigation container.
+$nav-height: 3em;
+
+// Tab styling.
+$tabs-container-bg: #fff;
+$tabs-border: #bbb;

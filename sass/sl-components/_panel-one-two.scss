@@ -1,0 +1,39 @@
+/* CSS code for panel page one col two rows
+** PANEL page
+** added by criscom
+** /panel-one-two
+**
+*/
+
+.panel-2col-stacked {
+    .panel-col-top,
+    .center-wrapper .panel-col-first,
+    .center-wrapper .panel-col-last {
+        @extend %base-background;
+    }
+    .pane__title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .panel-col-top {
+        @extend %white-space;
+    }
+    .center-wrapper {
+        @include clearfix;
+        .panel-col-first {
+            width: 68%;
+            @include breakpoint($iphone5-6)
+            {
+                width: 100%;
+            }
+        }
+        .panel-col-last {
+            width: 30%;
+            margin-left: 2%;
+            @include breakpoint($iphone5-6)
+            {
+                width: 100%;
+            }
+        }
+    }
+}

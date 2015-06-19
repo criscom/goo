@@ -1,0 +1,16 @@
+// Link colors
+
+// Apply below mixin to a elements
+// a {@include link-colors(blue, red, green, white);}
+// a {@include link-colors($normal: blue, $hover: red, $visited: green, $active: white);}
+@mixin link-colors (
+  $normal, 
+  $hover: $normal, 
+  $visited: $normal, 
+  $active: $normal
+  ) {
+  color: $normal;
+  &:hover {color: $hover;}
+  &:visited {color: $visited;}
+  &:active {color: $active;}
+}

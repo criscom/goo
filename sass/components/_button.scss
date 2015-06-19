@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Buttons.
+ */
+
+/* Buttons used by contrib modules like Media. */
+a.button
+{
+    @include appearance(button);
+}
+
+// In oder to make a link appear as a bootstrap button simply add "btn" and 
+// "btn-primary", "btn-success", "btn-info", "btn-warning", "btn-danger"
+// classes to the link via the "Erweiterte" dialog
+a.btn {
+    color: white !important;
+    text-decoration: none;
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+}

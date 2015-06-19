@@ -1,0 +1,13 @@
+/* CSS code for the fonts integration
+** added by criscom
+** this file contains general font declarations that apply to fonts across the site
+1. 
+
+*/
+body {
+  padding: 45px;
+  margin: 50px; }
+
+[role='main'] p, [role='main'] ul li {
+  display: flex; }
+

@@ -1,0 +1,72 @@
+/* CSS code for the fonts integration
+** added by criscom
+** this file contains general font declarations that apply to fonts across the site
+1. 
+
+*/
+
+body {
+    @extend %base-font-size;
+    @extend %base-font-weight;
+    color: $font-color;
+}
+
+// All paragraphs with the 'p' tag
+// UBUNTU LIGHT 18PT
+// Font weight: 300;
+[role='main']
+{
+    p,
+    ul li
+    {
+        @extend %base-font-size;
+        @extend %base-font-weight;
+    }
+}
+
+div.download-file a
+{
+    @extend .inline-link;
+    @extend %base-font-size;
+}
+
+// all inline links within a div tag
+
+.inline-link
+{
+    @include link-colors($normal: $black, $hover: $brand-primary, $visited: lighten($black, 10%));
+    text-decoration: underline;
+    @extend %base-font-weight;
+}
+
+div p a,
+.wohnungsdetails-link a,
+li a,
+.link a,
+.field-slideshow-caption-text a
+{
+    @extend .inline-link;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// header font weight
+
+h1 {
+    @extend %base-font-weight;
+}
+
+// hover color for link-less headers and titles
+
+.page-panels h1, // general header of panels page
+.panel-display .panle-panel h2, // header of a panel
+h1.object-title, // wohnung content type
+.page-title, // wohnung content list-style-type
+.node-wohnung .group-top h2, // wohnung content type
+.header-hover // general declaration
+{
+    &:hover {
+        color: $brand-primary;
+    }
+}

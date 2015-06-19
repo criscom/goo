@@ -1,0 +1,46 @@
+/* CSS code for the fonts integration
+** added by criscom
+** this file contains general font declarations that apply to fonts across the site
+1. 
+
+*/
+
+body {
+    @extend %base-font-size;
+    @extend %base-font-weight;
+    padding: 45px;
+    margin: 50px;
+}
+
+// All paragraphs with the 'p' tag
+// UBUNTU LIGHT 18PT
+// Font weight: 300;
+[role='main']
+{
+    p,
+    ul li
+    {
+        @extend %base-font-size;
+        @extend %base-font-weight;
+        display: flex;
+    }
+}
+
+div.download-file a
+{
+    @extend .inline-link;
+    @extend %base-font-size;
+}
+
+// all inline links within a div tag
+
+.inline-link
+{
+    // @include link-colors($normal: $red, $hover: black, $visited: lighten($red, 10%));
+    @extend %medium-font-weight;
+}
+
+.not-front div p a
+{
+    @extend .inline-link;
+}
