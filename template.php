@@ -86,11 +86,31 @@ function master2015_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function master2015_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+// Adjusting the search performance 
+function master2015_preprocess_search_api_page_results(array &$variables, $hook) {
+   $results = $variables['results'];
+
+  if (!empty($variables['results']['results'])) {
+    $variables['items'] = $variables['index']->loadItems(array_keys($variables['results']['results']));
+  }
+  $variables['result_count'] = $results['result count'];
+  $variables['sec'] = 0;
+  if (isset($results['performance']['complete'])) {
+    $variables['sec'] = round($results['performance']['complete'], 2);
+  }
+  $variables['search_performance'] = array(
+    '#theme' => 'search_api_page_search_performance',
+    '#markup' => format_plural(
+      $results['result count'],
+      'About 1 result in @sec seconds.',
+      'About @count results in @sec seconds.',
+      array('@sec' => $variables['sec'])
+    ),
+    '#prefix' => '<p class="search-performance">',
+    '#suffix' => '</p>',
+  );
 }
-// */
+
 
 /**
  * Override or insert variables into the node templates.
