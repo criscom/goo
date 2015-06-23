@@ -1428,9 +1428,20 @@ th {
   margin-right: auto;
   max-width: 1200px;
 }
+/* line 39, ../sass/layouts/_responsive.scss */
+.section-search .main, .section-search
+.region-bottom {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 45, ../sass/layouts/_responsive.scss */
+.section-search .main {
+  max-width: 100%;
+}
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 42, ../sass/layouts/_responsive.scss */
+/* line 50, ../sass/layouts/_responsive.scss */
 .header,
 .main-content,
 .main-navigation,
@@ -1447,7 +1458,7 @@ th {
 }
 
 /* Containers for grid items and flow items. */
-/* line 53, ../sass/layouts/_responsive.scss */
+/* line 61, ../sass/layouts/_responsive.scss */
 .header,
 .main,
 .footer {
@@ -1472,14 +1483,14 @@ th {
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  /* line 61, ../sass/layouts/_responsive.scss */
+  /* line 69, ../sass/layouts/_responsive.scss */
   .main {
     /* Move all the children of .main down to make room. */
     padding-top: 3em;
     position: relative;
   }
 
-  /* line 66, ../sass/layouts/_responsive.scss */
+  /* line 74, ../sass/layouts/_responsive.scss */
   .main-navigation {
     /* Move the navbar up inside .main's padding. */
     position: absolute;
@@ -1495,12 +1506,12 @@ th {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 87, ../sass/layouts/_responsive.scss */
+  /* line 95, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 89, ../sass/layouts/_responsive.scss */
+  /* line 97, ../sass/layouts/_responsive.scss */
   .sidebar-first .main-content {
     float: left;
     width: 66.66667%;
@@ -1508,7 +1519,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 94, ../sass/layouts/_responsive.scss */
+  /* line 102, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -1520,12 +1531,12 @@ th {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 102, ../sass/layouts/_responsive.scss */
+  /* line 110, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 104, ../sass/layouts/_responsive.scss */
+  /* line 112, ../sass/layouts/_responsive.scss */
   .sidebar-second .main-content {
     float: left;
     width: 66.66667%;
@@ -1533,7 +1544,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 109, ../sass/layouts/_responsive.scss */
+  /* line 117, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -1545,13 +1556,13 @@ th {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 117, ../sass/layouts/_responsive.scss */
+  /* line 125, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 119, ../sass/layouts/_responsive.scss */
+  /* line 127, ../sass/layouts/_responsive.scss */
   .two-sidebars .main-content {
     float: left;
     width: 66.66667%;
@@ -1559,7 +1570,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 124, ../sass/layouts/_responsive.scss */
+  /* line 132, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -1567,7 +1578,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 129, ../sass/layouts/_responsive.scss */
+  /* line 137, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -1593,7 +1604,7 @@ th {
   .two-sidebars .region-sidebar-second:after {
     clear: both;
   }
-  /* line 135, ../sass/layouts/_responsive.scss */
+  /* line 143, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -1603,7 +1614,7 @@ th {
     box-sizing: border-box;
     *word-wrap: break-word;
   }
-  /* line 139, ../sass/layouts/_responsive.scss */
+  /* line 147, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -1612,7 +1623,7 @@ th {
     *margin-right: -99.9%;
     clear: left;
   }
-  /* line 144, ../sass/layouts/_responsive.scss */
+  /* line 152, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
@@ -1620,7 +1631,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 148, ../sass/layouts/_responsive.scss */
+  /* line 156, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -1636,12 +1647,12 @@ th {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 165, ../sass/layouts/_responsive.scss */
+  /* line 173, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 167, ../sass/layouts/_responsive.scss */
+  /* line 175, ../sass/layouts/_responsive.scss */
   .sidebar-first .main-content {
     float: left;
     width: 80%;
@@ -1649,7 +1660,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 172, ../sass/layouts/_responsive.scss */
+  /* line 180, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
@@ -1661,12 +1672,12 @@ th {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 180, ../sass/layouts/_responsive.scss */
+  /* line 188, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 182, ../sass/layouts/_responsive.scss */
+  /* line 190, ../sass/layouts/_responsive.scss */
   .sidebar-second .main-content {
     float: left;
     width: 80%;
@@ -1674,7 +1685,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 187, ../sass/layouts/_responsive.scss */
+  /* line 195, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 20%;
@@ -1686,13 +1697,13 @@ th {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 195, ../sass/layouts/_responsive.scss */
+  /* line 203, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 197, ../sass/layouts/_responsive.scss */
+  /* line 205, ../sass/layouts/_responsive.scss */
   .two-sidebars .main-content {
     float: left;
     width: 60%;
@@ -1700,7 +1711,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 202, ../sass/layouts/_responsive.scss */
+  /* line 210, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
@@ -1708,7 +1719,7 @@ th {
     margin-right: -100%;
     *margin-right: -99.9%;
   }
-  /* line 207, ../sass/layouts/_responsive.scss */
+  /* line 215, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
@@ -4174,6 +4185,151 @@ ul.nice-menu ul li a:active {
 /* line 4, ../sass/sl-components/_projekte-landing-page.scss */
 .isotope-element img {
   width: 280px;
+}
+
+/* Search Results
+* /search; /search-results
+*/
+/* line 6, ../sass/sl-components/_search-results.scss */
+.section-search header {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #d7d7d7;
+  padding-top: 16px;
+  height: 59px;
+  margin-bottom: 16px;
+}
+/* line 15, ../sass/sl-components/_search-results.scss */
+.section-search .header-region {
+  height: 59px;
+}
+/* line 18, ../sass/sl-components/_search-results.scss */
+.section-search .main-navigation,
+.section-search .main-content,
+.section-search .block-search-api-page {
+  padding-left: 128px;
+}
+/* line 23, ../sass/sl-components/_search-results.scss */
+.section-search .block-search-api-page {
+  width: 60%;
+  margin-bottom: 1rem !important;
+  float: left;
+}
+/* line 29, ../sass/sl-components/_search-results.scss */
+.section-search #block-block-3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+/* line 33, ../sass/sl-components/_search-results.scss */
+.section-search #block-block-4 {
+  margin-bottom: 0;
+}
+/* line 37, ../sass/sl-components/_search-results.scss */
+.section-search #logo img {
+  position: absolute;
+  left: 16px;
+}
+/* line 43, ../sass/sl-components/_search-results.scss */
+.section-search .wide.input {
+  width: 100%;
+  max-width: 600px;
+  height: 28px;
+}
+/* line 49, ../sass/sl-components/_search-results.scss */
+.section-search button {
+  width: 58px;
+  height: 28px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #4387fd;
+}
+/* line 57, ../sass/sl-components/_search-results.scss */
+.section-search .glyphicons-search {
+  color: white;
+}
+/* line 60, ../sass/sl-components/_search-results.scss */
+.section-search ol.search-results {
+  padding-left: 0;
+}
+
+/* line 67, ../sass/sl-components/_search-results.scss */
+.section-search .main-navigation li {
+  padding: 0 8px;
+  margin: 0 8px;
+}
+/* line 70, ../sass/sl-components/_search-results.scss */
+.section-search .main-navigation li a {
+  font-size: 13px;
+  color: #777;
+  text-decoration: none;
+}
+/* line 74, ../sass/sl-components/_search-results.scss */
+.section-search .main-navigation li a:hover {
+  color: #000;
+}
+/* line 79, ../sass/sl-components/_search-results.scss */
+.section-search .main-navigation li.first {
+  margin-left: 0;
+  padding-bottom: 16px;
+  border-bottom: 3px solid #dd4b39;
+}
+/* line 83, ../sass/sl-components/_search-results.scss */
+.section-search .main-navigation li.first a {
+  color: #dd4b39;
+  font-weight: bold;
+}
+
+/* line 92, ../sass/sl-components/_search-results.scss */
+.section-search .main {
+  padding-top: 44px;
+}
+/* line 95, ../sass/sl-components/_search-results.scss */
+.section-search .main-content {
+  border-top: 1px solid #d7d7d7;
+}
+/* line 98, ../sass/sl-components/_search-results.scss */
+.section-search .search-performance {
+  color: #808080;
+  font-size: 13px;
+  margin-top: 13px;
+  padding-left: 0px;
+}
+/* line 105, ../sass/sl-components/_search-results.scss */
+.section-search .search-api-page-results {
+  max-width: 528px;
+  padding-left: 8px;
+}
+/* line 111, ../sass/sl-components/_search-results.scss */
+.section-search .field-name-title-field h2, .section-search .field-name-title-field h2 a {
+  color: #1a0dab;
+  font-size: 18px;
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+}
+/* line 116, ../sass/sl-components/_search-results.scss */
+.section-search .field-name-title-field h2:hover, .section-search .field-name-title-field h2 a:hover {
+  text-decoration: underline;
+}
+/* line 122, ../sass/sl-components/_search-results.scss */
+.section-search .field-name-field-hyperlink a {
+  color: #006621;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 129, ../sass/sl-components/_search-results.scss */
+.section-search .field-name-body p {
+  color: #545454;
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* CSS code for wohnung detail page

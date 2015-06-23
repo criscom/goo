@@ -24,23 +24,6 @@ function master2015_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
-function master2015_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'search_api_page_search_form_home') {
-  
-    unset($form['search_api_page_search_form_home']['#title']);
-    
-    $form['keys_1']['#title_display'] = 'invisible';
-    $form_default = t('');
-    $form['keys_1']['#default_value'] = $form_default;
-    // $form['submit_1'] = array('#type' => 'image_button', '#src' => base_path() . drupal_get_path('theme', 'einstern_2014') . '/images/search_icon.png', '#alt' => 'search', '#prefix' => '<div class="form-actions">', '#suffix' => '</div>');
-    $form['keys_1']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}" );
-    // $form['submit_1'] = array('#prefix' => '<div class="form-actions criscom">', '#suffix' => '</div>');
-    $form['submit_1']['#value'] = t('Google Search'); // Change the text on the submit button
-    $form['submit_2']['#value'] = t('I am feeling lucky');
-    // dpm($form);
-  }
-}
-
 
 /**
  * Override or insert variables into the maintenance page template.
@@ -102,8 +85,8 @@ function master2015_preprocess_search_api_page_results(array &$variables, $hook)
     '#theme' => 'search_api_page_search_performance',
     '#markup' => format_plural(
       $results['result count'],
-      'About 1 result in @sec seconds.',
-      'About @count results in @sec seconds.',
+      'About 1 result (@sec seconds)',
+      'About @count results (@sec seconds)',
       array('@sec' => $variables['sec'])
     ),
     '#prefix' => '<p class="search-performance">',
@@ -111,6 +94,77 @@ function master2015_preprocess_search_api_page_results(array &$variables, $hook)
   );
 }
 
+function master2015_form_alter(&$form, &$form_state, $form_id) {
+
+// search form home page
+
+  if ($form_id == 'search_api_page_search_form_home') {
+  
+    unset($form['search_api_page_search_form_home']['#title']);
+    
+    $form['keys_1']['#title_display'] = 'invisible';
+    $form_default = t('');
+    $form['keys_1']['#default_value'] = $form_default;
+    // $form['submit_1'] = array('#type' => 'image_button', '#src' => base_path() . drupal_get_path('theme', 'einstern_2014') . '/images/search_icon.png', '#alt' => 'search', '#prefix' => '<div class="form-actions">', '#suffix' => '</div>');
+    $form['keys_1']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}" );
+    // $form['submit_1'] = array('#prefix' => '<div class="form-actions criscom">', '#suffix' => '</div>');
+    $form['submit_1']['#value'] = t('Google Search'); // Change the text on the submit button
+    // $form['submit_2']['#value'] = t('I am feeling lucky');
+    // dpm($form);
+}
+// search form results page
+
+  if ($form_id == 'search_api_page_search_form_results') {
+  
+    unset($form['search_api_page_search_form_results']['#title']);
+    
+    $form['keys_2']['#title_display'] = 'invisible';
+    $form_default = t('');
+    $form['keys_2']['#default_value'] = $form_default;
+    // $form['submit_2'] = array('#type' => 'image_button', '#src' => base_path() . drupal_get_path('theme', 'master2015') . '/images/nav_logo195.png', '#alt' => 'search', '#prefix' => '<div class="form-actions">', '#suffix' => '</div>');
+    
+    // $form['submit_2'] = array('#type' => 'image_button', '#prefix' => '<div class="form-actions"><span class="glyphicons glyphicons-search">', '#suffix' => '</span></div>');
+    
+    // $form['actions']['submit']['attributes']['class'][] = 'glyphicons glyphicons-search';
+    
+    // $form['keys_2']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}" );
+    
+
+
+        // Hide the default button from display.
+        $form['submit_2']['#attributes']['class'][] = 'element-invisible';
+         // Implement a theme wrapper to add a submit button containing a search
+        // icon directly after the input element.
+        $form['keys_2']['#theme_wrappers'] = array('master2015_search_form_wrapper');
+        $form['keys_2']['#title'] = '';
+        //control the width of the input           
+        $form['keys_2']['#attributes']['class'][] = 'wide input';
+        $form['keys_2']['#attributes']['placeholder'] = t('');
+  }
+}
+
+function master2015_master2015_search_form_wrapper($variables) {
+  $output = '<div class="field append">';
+  $output .= $variables['element']['#children'];
+  $output .= '<button type="submit" class="medium primary btn">';
+  $output .= '<span class="glyphicons glyphicons-search"></span>';
+  $output .= '<span class="element-invisible">' . t('Search') . '</span>';
+  $output .= '</button>';
+  $output .= '</div>';
+  return $output;
+}
+
+function master2015_theme(&$existing, $type, $theme, $path) {
+  // Custom theme hooks:
+  // Do not define the `path` or `template`.
+  $hook_theme = array(
+    'master2015_search_form_wrapper' => array(
+      'render element' => 'element',
+    ),
+  );
+
+  return $hook_theme;
+}
 
 /**
  * Override or insert variables into the node templates.
