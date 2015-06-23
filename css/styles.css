@@ -4311,25 +4311,25 @@ ul.nice-menu ul li a:active {
 .section-search .field-name-title-field h2, .section-search .field-name-title-field h2 a {
   color: #1a0dab;
   font-size: 18px;
+  margin-top: 0;
   margin-bottom: 0 !important;
   line-height: 1.2;
 }
-/* line 116, ../sass/sl-components/_search-results.scss */
+/* line 117, ../sass/sl-components/_search-results.scss */
 .section-search .field-name-title-field h2:hover, .section-search .field-name-title-field h2 a:hover {
   text-decoration: underline;
 }
-/* line 122, ../sass/sl-components/_search-results.scss */
+/* line 123, ../sass/sl-components/_search-results.scss */
 .section-search .field-name-field-hyperlink a {
   color: #006621;
   font-size: 14px;
   font-weight: bold;
 }
-/* line 129, ../sass/sl-components/_search-results.scss */
+/* line 130, ../sass/sl-components/_search-results.scss */
 .section-search .field-name-body p {
   color: #545454;
   font-size: 13px;
   margin-top: 0;
-  margin-bottom: 0;
 }
 
 /* CSS code for wohnung detail page
