@@ -40,13 +40,30 @@
         left: 16px;
     }
     // search form input
+    form#search-api-page-search-form-results {
+        // width: 100%;
+        @include breakpoint($max768) {
+            margin-right: 5%;
+
+        }
+    }
     .wide.input {
-        width: 100%;
+        width: 95%;
         max-width: 590px;
         height: 29px;
+        @include breakpoint($max1295) {
+            // max-width: 400px;
+        }
+        @include breakpoint($range769-961) {
+            // max-width: 300px;
+        }
+        @include breakpoint($max768) {
+            // max-width: 200px;
+        }
     }
     // search button
     button {
+        position: absolute;
         width: 58px;
         height: 29px;
         margin-bottom: 1px;
