@@ -47,7 +47,16 @@
     </ol>
     <?php print render($pager); ?>
   <?php else : ?>
-    <h2><?php print t('Your search yielded no results.');?></h2>
-    <?php print $no_results_help; ?>
+    <h2><?php print '"'.$keys.'"' . t(' yielded no results.');?></h2>
+    <h3><?php print t('Google is interested in a collaboration with <strong>Paperwhite Studio</strong> right now.');?></h3>
+    <!-- <?php print $no_results_help; ?> -->
+    <ul>
+      <li><a href="http://www.paperwhite-studio.com/case-studies/" target="_blank">Capabilities</a></li>
+      <li><a href="http://www.paperwhite-studio.com/clients/" target="_blank">Services</a></li>
+      <li><a href="http://www.paperwhite-studio.com/studio/" target="_blank">Bubs</a></li>
+      <li><a href="http://www.paperwhite-studio.com/studio/" target="_blank">Team</a></li>
+      <li><a href="http://www.paperwhite-studio.com/work/" target="_blank">Work</a></li>
+    </ul>
+
   <?php endif; ?>
 </div>
