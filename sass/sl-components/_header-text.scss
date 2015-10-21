@@ -32,19 +32,26 @@
             }
     }
     span.block {
-        padding-right: 16px;
-        padding-right: 1rem;
+        padding-right: 24px;
+        padding-right: 1.5rem;
+        .not-front & {
+            display: none;
+        }
     }
-    span.glyphicons {
+    span.glyphicons,
+    span.halflings-th {
         top: 6px;
         top: 0.375rem;
         font-size: 18px !important;
         font-size: 1.125rem !important;
         opacity: 1;
+        color: lighten($font-color, 10%);
     }
     .btn-primary {
         @include background-image(linear-gradient(top, rgb(67, 135, 253), rgb(70, 131, 234)));
         @include border-radius(2px);
+        margin-left: 24px;
+        margin-left: 1.5rem;
     }
     .btn a {
         color: white;

@@ -12,23 +12,23 @@
 }
 
 .view-google-doodle {
-    margin-top: 71px;
-    margin-top: 4.4375rem;
+    margin-top: 27px;
+    // margin-top: 4.4375rem;
 }
 
 .front {
     .block-search-api-page {
         // margin-top: 6px;
     }
-    div.form-item-keys-1 {
+    div.form-item-keys-3 {
         margin-top: 25px;
         margin-top: 1.5625rem;
-        margin-bottom: 16px;
-        margin-bottom: 1rem;
+        margin-bottom: 32px;
+        margin-bottom: 2rem;
     }
     input.form-text {
         width: 570px;
-        height: 30px;
+        height: 38px;
         outline: none;
         &:focus {
             outline: none;
@@ -40,21 +40,31 @@
         box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         border: 1px solid #c6c6c6;
         color: #222;
+        @include background-image(linear-gradient(top, rgb(248,248,248), rgb(241,241,241)));
+        background-color: rgb(248,248,248);
+
         }
     }
     .block-search-api-page {
         .btn-primary {
-            border: 1px solid rgba(0,0,0,0.1);
+            // border: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid rgb(242,242,242);
             color: #444;
             @include border-radius(2px);
-            height: 29px;
-            line-height: 27px;
-            padding: 0 8px;
-            margin: 0 8px;
+            cursor: default;
+            // height: 29px;
+            // line-height: 27px;
+            height: 36px;
+            line-height: 32px;
+            min-width: 54px;
+            padding: 0 18px;
+            margin: 0 4px;
+            // @include background-image(linear-gradient(top, rgb(245,245,245), rgb(241,241,241)));
             @include background-image(linear-gradient(top, rgb(245,245,245), rgb(241,241,241)));
-            font-size: 11px;
+            font-size: 13px;
             font-weight: bold;
-            color: rgb(68,68,68);
+            // color: rgb(68,68,68);
+            color: rgb(117,117,117);
         }
     }
 }
