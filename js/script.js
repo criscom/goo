@@ -30,7 +30,10 @@
         $( '<input type="submit" id="edit-submit-2" name="op" value="I am feeling lucky!" class="btn-primary btn form-submit">' ).insertAfter( ".front #search-api-page-search-form-home .form-submit" );
 
         // modal window for showcasing the icons
-        // $('#icons').modal(options);
+        //$('#icons').modal(options);
+        $('#icons button.close').click(function() {
+            $('#icons').fadeOut("fast");
+        });
     });
 })(jQuery);
 

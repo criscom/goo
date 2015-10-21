@@ -3698,7 +3698,73 @@ h1.object-title:hover,
   padding-left: 1rem;
 }
 
-/* line 3, ../sass/sl-components/_icons-modal.scss */
+/* line 136, assets/*.png */
+.asset, .assets-icon_docs_base, .assets-icon_docs_hover, .docs a:hover, .assets-icon_maps_base, .assets-icon_maps_hover, .maps a:hover, .assets-icon_news_base, .assets-icon_news_hover, .news a:hover, .assets-icon_photos_base, .assets-icon_photos_hover, .photos a:hover, .assets-icon_slides_base, .assets-icon_slides_hover, .slides a:hover, .assets-icon_youtube_base, .assets-icon_youtube_hover, .youtube a:hover {
+  background-image: url('../images/assets-s7c84671775.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_docs_base {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_docs_hover, .docs a:hover {
+  background-position: -52px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_maps_base {
+  background-position: -104px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_maps_hover, .maps a:hover {
+  background-position: -156px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_news_base {
+  background-position: -208px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_news_hover, .news a:hover {
+  background-position: -260px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_photos_base {
+  background-position: -312px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_photos_hover, .photos a:hover {
+  background-position: -364px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_slides_base {
+  background-position: -416px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_slides_hover, .slides a:hover {
+  background-position: -468px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_youtube_base {
+  background-position: -520px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.assets-icon_youtube_hover, .youtube a:hover {
+  background-position: -572px 0;
+}
+
+/* line 12, ../sass/sl-components/_icons-modal.scss */
 .modal {
   display: inherit;
   left: inherit;
@@ -3706,10 +3772,101 @@ h1.object-title:hover,
   top: 90px;
 }
 
-/* line 10, ../sass/sl-components/_icons-modal.scss */
+/* line 19, ../sass/sl-components/_icons-modal.scss */
+.modal-backdrop {
+  background-color: transparent;
+}
+/* line 21, ../sass/sl-components/_icons-modal.scss */
+.modal-backdrop.in {
+  opacity: 0;
+}
+
+/* line 26, ../sass/sl-components/_icons-modal.scss */
+.modal-content {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 31, ../sass/sl-components/_icons-modal.scss */
 .modal-dialog {
-  width: 350px;
   margin: 0 30px 0 0;
+}
+
+/* line 35, ../sass/sl-components/_icons-modal.scss */
+.modal-header {
+  border-bottom: 0;
+  margin: 0;
+  padding: 8px 8px 0 8px;
+}
+/* line 39, ../sass/sl-components/_icons-modal.scss */
+.modal-header h4 {
+  padding: 26px 48px 0 48px;
+  font-size: 13px;
+  color: #4f4f4f;
+}
+
+/* line 46, ../sass/sl-components/_icons-modal.scss */
+.modal-body {
+  padding-top: 8px;
+}
+
+/* line 50, ../sass/sl-components/_icons-modal.scss */
+.close {
+  opacity: 0.5;
+}
+
+/* line 54, ../sass/sl-components/_icons-modal.scss */
+.icon-list {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  padding-left: 16px;
+  padding-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+/* line 6, ../sass/library/_clearfix.scss */
+.icon-list:before {
+  content: '';
+  display: table;
+}
+/* line 11, ../sass/library/_clearfix.scss */
+.icon-list:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/* line 63, ../sass/sl-components/_icons-modal.scss */
+.icon-list li {
+  position: relative;
+  float: left;
+  padding-right: 40px;
+}
+/* line 67, ../sass/sl-components/_icons-modal.scss */
+.icon-list li.youtube, .icon-list li.slides {
+  padding-right: 0;
+}
+
+/* line 74, ../sass/sl-components/_icons-modal.scss */
+.icon-text {
+  text-align: center;
+  font-size: 13px;
+}
+
+/* line 79, ../sass/sl-components/_icons-modal.scss */
+.icon-link {
+  display: block;
+  height: 61px;
+  width: 52px;
+  text-decoration: none;
+}
+
+/* line 86, ../sass/sl-components/_icons-modal.scss */
+.photos, .docs, .slides {
+  margin-top: 16px;
 }
 
 /* styles for isotope filter and isotope views like events/reisen */

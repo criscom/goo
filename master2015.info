@@ -114,7 +114,7 @@ scripts[] = js/smartmenus/jquery.smartmenus.min.js
 scripts[] = js/smartmenus/jquery.smartmenus.bootstrap.min.js
 
 ; bootstrap scripts
-scripts[] = js/modal.js
+;scripts[] = js/modal.js
 
 ; custom JS file
 scripts[] = js/flexslider.js

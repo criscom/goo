@@ -1,5 +1,14 @@
 
 
+// Image sprites
+
+// NEW Sprite approach
+$assets-layout: horizontal;
+// $assets-spacing: 4px;
+$assets-sprite-base-class: ".asset";
+@import 'assets/*.png';
+@include all-assets-sprites;
+
 .modal {
     display: inherit;
     left: inherit;
@@ -7,7 +16,99 @@
     top: 90px;
 }
 
+.modal-backdrop {
+    background-color: transparent;
+    &.in {
+        opacity: 0;
+    }
+}
+
+.modal-content {
+    @include border-radius(0);
+    @include box-shadow(none);
+}
+
 .modal-dialog {
-    width: 350px;
     margin: 0 30px 0 0;
+}
+
+.modal-header {
+    border-bottom: 0;
+    margin: 0;
+    padding: 8px 8px 0 8px;
+    h4 {
+        padding: 26px 48px 0 48px;
+        font-size: 13px;
+        color: lighten($font-color, 6%)
+    }
+}
+
+.modal-body {
+    padding-top: 8px;
+}
+
+.close {
+    opacity: 0.5;
+}
+
+.icon-list {
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+    padding-left: 16px;
+    padding-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    @include clearfix();
+    li {
+        position: relative;
+        float: left;
+        padding-right: 40px;
+        &.youtube,
+        &.slides {
+            padding-right: 0;
+        }
+    }
+}
+
+.icon-text {
+    text-align: center;
+    font-size: 13px;
+}
+
+.icon-link {
+    display: block;
+    height: 61px;
+    width: 52px;
+    text-decoration: none;
+}
+
+.photos, .docs, .slides {
+    margin-top: 16px;
+}
+
+// hover styles
+
+.news a:hover {
+    @extend .assets-icon_news_hover;
+}
+
+.maps a:hover {
+    @extend .assets-icon_maps_hover;
+}
+
+.youtube a:hover {
+    @extend .assets-icon_youtube_hover;
+}
+
+.photos a:hover {
+    @extend .assets-icon_photos_hover;
+}
+
+.docs a:hover {
+    @extend .assets-icon_docs_hover;
+}
+
+.slides a:hover {
+    @extend .assets-icon_slides_hover;
 }
