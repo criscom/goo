@@ -5,14 +5,46 @@
 
 
 
-footer {
-    background-color: $header-color;
+.footer {
+    background-color: $footer-color;
     margin: 24px 0 16px 0;
     margin: 1.5rem 0 1rem 0;
-    border-radius: 4px;
-    a {
-        @include link-colors($normal: #333 !important,
-            $hover: $brand-primary !important);
-       font-weight: 300 !important;
+    border-top: 1px solid rgb(228,228,228);
+    .block {
+        margin-bottom: 0;
     }
+    .footer-menu-wrapper {
+        @include display-flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+    a {
+        font-size: 13px;
+        color: darken(rgb(102,102,102), 12%);
+        font-weight: 300 !important;
+        text-decoration: none;
+        &:hover {
+            color: darken(rgb(102,102,102), 12%);
+            text-decoration: underline;
+        }
+    }
+    .menu {
+        @include display-flex;
+        padding-left: 0;
+        margin: 8px 0;
+        li {
+            list-style: none;
+            list-style-image: none;
+            list-style-type: none;
+            padding-right: 24px;
+            padding-right: 1.5rem;
+            &.last {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.footer-menu-1 {
+    margin-left: 12px;
 }

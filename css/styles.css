@@ -3437,28 +3437,58 @@ h1.object-title:hover,
 ** 
 */
 /* line 8, ../sass/sl-components/_footer.scss */
-footer {
-  background-color: transparent;
+.footer {
+  background-color: #f2f2f2;
   margin: 24px 0 16px 0;
   margin: 1.5rem 0 1rem 0;
-  border-radius: 4px;
+  border-top: 1px solid #e4e4e4;
 }
 /* line 13, ../sass/sl-components/_footer.scss */
-footer a {
-  color: #333 !important;
+.footer .block {
+  margin-bottom: 0;
+}
+/* line 16, ../sass/sl-components/_footer.scss */
+.footer .footer-menu-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 21, ../sass/sl-components/_footer.scss */
+.footer a {
+  font-size: 13px;
+  color: #474747;
   font-weight: 300 !important;
+  text-decoration: none;
 }
-/* line 13, ../sass/library/_link.scss */
-footer a:hover {
-  color: #428bca !important;
+/* line 26, ../sass/sl-components/_footer.scss */
+.footer a:hover {
+  color: #474747;
+  text-decoration: underline;
 }
-/* line 14, ../sass/library/_link.scss */
-footer a:visited {
-  color: #333 !important;
+/* line 31, ../sass/sl-components/_footer.scss */
+.footer .menu {
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 0;
+  margin: 8px 0;
 }
-/* line 15, ../sass/library/_link.scss */
-footer a:active {
-  color: #333 !important;
+/* line 35, ../sass/sl-components/_footer.scss */
+.footer .menu li {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  padding-right: 24px;
+  padding-right: 1.5rem;
+}
+/* line 41, ../sass/sl-components/_footer.scss */
+.footer .menu li.last {
+  padding-right: 0;
+}
+
+/* line 48, ../sass/sl-components/_footer.scss */
+.footer-menu-1 {
+  margin-left: 12px;
 }
 
 /* CSS code for frontpage
