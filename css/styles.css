@@ -3439,41 +3439,40 @@ h1.object-title:hover,
 /* line 8, ../sass/sl-components/_footer.scss */
 .footer {
   background-color: #f2f2f2;
-  margin: 24px 0 16px 0;
-  margin: 1.5rem 0 1rem 0;
+  margin: 0;
   border-top: 1px solid #e4e4e4;
 }
-/* line 13, ../sass/sl-components/_footer.scss */
+/* line 12, ../sass/sl-components/_footer.scss */
 .footer .block {
   margin-bottom: 0;
 }
-/* line 16, ../sass/sl-components/_footer.scss */
+/* line 15, ../sass/sl-components/_footer.scss */
 .footer .footer-menu-wrapper {
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 21, ../sass/sl-components/_footer.scss */
+/* line 20, ../sass/sl-components/_footer.scss */
 .footer a {
   font-size: 13px;
-  color: #474747;
+  color: #575757;
   font-weight: 300 !important;
   text-decoration: none;
 }
-/* line 26, ../sass/sl-components/_footer.scss */
+/* line 25, ../sass/sl-components/_footer.scss */
 .footer a:hover {
-  color: #474747;
+  color: #575757;
   text-decoration: underline;
 }
-/* line 31, ../sass/sl-components/_footer.scss */
+/* line 30, ../sass/sl-components/_footer.scss */
 .footer .menu {
   display: -webkit-flex;
   display: flex;
   padding-left: 0;
   margin: 8px 0;
 }
-/* line 35, ../sass/sl-components/_footer.scss */
+/* line 34, ../sass/sl-components/_footer.scss */
 .footer .menu li {
   list-style: none;
   list-style-image: none;
@@ -3481,14 +3480,34 @@ h1.object-title:hover,
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 41, ../sass/sl-components/_footer.scss */
+/* line 40, ../sass/sl-components/_footer.scss */
 .footer .menu li.last {
   padding-right: 0;
 }
 
-/* line 48, ../sass/sl-components/_footer.scss */
+/* line 47, ../sass/sl-components/_footer.scss */
 .footer-menu-1 {
   margin-left: 12px;
+}
+
+/* line 53, ../sass/sl-components/_footer.scss */
+#page {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 58, ../sass/sl-components/_footer.scss */
+#main {
+  padding-bottom: 41px;
+}
+
+/* line 62, ../sass/sl-components/_footer.scss */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 41px;
+  /* Height of the footer */
 }
 
 /* CSS code for frontpage
@@ -3677,6 +3696,20 @@ h1.object-title:hover,
   font-size: 48px;
   padding-left: 16px;
   padding-left: 1rem;
+}
+
+/* line 3, ../sass/sl-components/_icons-modal.scss */
+.modal {
+  display: inherit;
+  left: inherit;
+  bottom: inherit;
+  top: 90px;
+}
+
+/* line 10, ../sass/sl-components/_icons-modal.scss */
+.modal-dialog {
+  width: 350px;
+  margin: 0 30px 0 0;
 }
 
 /* styles for isotope filter and isotope views like events/reisen */

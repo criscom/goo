@@ -28,6 +28,9 @@
     $(document).ready(function() {
         // $('ul.isotope-filters li>a').addClass('isotope-button'); // add a class to the button links
         $( '<input type="submit" id="edit-submit-2" name="op" value="I am feeling lucky!" class="btn-primary btn form-submit">' ).insertAfter( ".front #search-api-page-search-form-home .form-submit" );
+
+        // modal window for showcasing the icons
+        // $('#icons').modal(options);
     });
 })(jQuery);
 
