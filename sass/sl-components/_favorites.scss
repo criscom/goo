@@ -10,6 +10,17 @@
 // NEW Sprite approach
 $favorites-layout: horizontal;
 // $favorites-spacing: 4px;
-$favorites-sprite-base-class: ".asset";
+$favorites-sprite-base-class: ".favorites-images";
 @import 'favorites/*.png';
 @include all-favorites-sprites;
+
+.favorites {
+    @include display-flex;
+    li a {
+        display: block;
+        @extend .favorites-images;
+        @include hide-text();
+        width: 154px;
+        height: 128px;
+    }
+}

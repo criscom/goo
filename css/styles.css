@@ -3368,6 +3368,65 @@ li a,
   text-transform: uppercase;
 }
 
+/* CSS code for FAVORITES block
+** Blocks added in context module
+** added by criscom
+** /front
+**
+*/
+/* line 88, favorites/*.png */
+.favorites-images, .favorites-fav_01, .favorites-fav_02, .favorites-fav_03, .favorites-fav_04, .favorites-fav_05, .favorites-fav_06, .favorites li a {
+  background-image: url('../images/favorites-sba37a53a68.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-fav_01 {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-fav_02 {
+  background-position: -154px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-fav_03 {
+  background-position: -308px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-fav_04 {
+  background-position: -462px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-fav_05 {
+  background-position: -616px 0;
+}
+
+/* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-fav_06 {
+  background-position: -770px 0;
+}
+
+/* line 17, ../sass/sl-components/_favorites.scss */
+.favorites {
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 19, ../sass/sl-components/_favorites.scss */
+.favorites li a {
+  display: block;
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  width: 154px;
+  height: 128px;
+}
+
 /* CSS code for the fonts integration
 ** added by criscom
 ** this file contains general font declarations that apply to fonts across the site
@@ -3707,9 +3766,15 @@ h1.object-title:hover,
 **
 */
 /* hover icon code */
+/* CSS code for ICONS modal window
+** Blocks added in context module
+** added by criscom
+** /front
+**
+*/
 /* line 136, assets/*.png */
 .asset, .assets-icon_docs_base, .assets-icon_docs_hover, .docs a:hover, .assets-icon_maps_base, .assets-icon_maps_hover, .maps a:hover, .assets-icon_news_base, .assets-icon_news_hover, .news a:hover, .assets-icon_photos_base, .assets-icon_photos_hover, .photos a:hover, .assets-icon_slides_base, .assets-icon_slides_hover, .slides a:hover, .assets-icon_youtube_base, .assets-icon_youtube_hover, .youtube a:hover {
-  background-image: url('../images/assets-s7c84671775.png');
+  background-image: url('../images/assets-sa0584246cf.png');
   background-repeat: no-repeat;
 }
 
@@ -3720,60 +3785,60 @@ h1.object-title:hover,
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_docs_hover, .docs a:hover {
-  background-position: -52px 0;
+  background-position: -70px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_maps_base {
-  background-position: -104px 0;
+  background-position: -140px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_maps_hover, .maps a:hover {
-  background-position: -156px 0;
+  background-position: -210px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_news_base {
-  background-position: -208px 0;
+  background-position: -280px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_news_hover, .news a:hover {
-  background-position: -260px 0;
+  background-position: -350px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_photos_base {
-  background-position: -312px 0;
+  background-position: -420px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_photos_hover, .photos a:hover {
-  background-position: -364px 0;
+  background-position: -490px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_slides_base {
-  background-position: -416px 0;
+  background-position: -560px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_slides_hover, .slides a:hover {
-  background-position: -468px 0;
+  background-position: -630px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_youtube_base {
-  background-position: -520px 0;
+  background-position: -700px 0;
 }
 
 /* line 84, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .assets-icon_youtube_hover, .youtube a:hover {
-  background-position: -572px 0;
+  background-position: -770px 0;
 }
 
-/* line 12, ../sass/sl-components/_icons-modal.scss */
+/* line 17, ../sass/sl-components/_icons-modal.scss */
 .modal {
   display: inherit;
   left: inherit;
@@ -3781,16 +3846,16 @@ h1.object-title:hover,
   top: 90px;
 }
 
-/* line 19, ../sass/sl-components/_icons-modal.scss */
+/* line 24, ../sass/sl-components/_icons-modal.scss */
 .modal-backdrop {
   background-color: transparent;
 }
-/* line 21, ../sass/sl-components/_icons-modal.scss */
+/* line 26, ../sass/sl-components/_icons-modal.scss */
 .modal-backdrop.in {
   opacity: 0;
 }
 
-/* line 26, ../sass/sl-components/_icons-modal.scss */
+/* line 31, ../sass/sl-components/_icons-modal.scss */
 .modal-content {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -3799,35 +3864,35 @@ h1.object-title:hover,
   box-shadow: none;
 }
 
-/* line 31, ../sass/sl-components/_icons-modal.scss */
+/* line 36, ../sass/sl-components/_icons-modal.scss */
 .modal-dialog {
   margin: 0 30px 0 0;
 }
 
-/* line 35, ../sass/sl-components/_icons-modal.scss */
+/* line 40, ../sass/sl-components/_icons-modal.scss */
 .modal-header {
   border-bottom: 0;
   margin: 0;
   padding: 8px 8px 0 8px;
 }
-/* line 39, ../sass/sl-components/_icons-modal.scss */
+/* line 44, ../sass/sl-components/_icons-modal.scss */
 .modal-header h4 {
   padding: 26px 48px 0 48px;
   font-size: 13px;
   color: #4f4f4f;
 }
 
-/* line 46, ../sass/sl-components/_icons-modal.scss */
+/* line 51, ../sass/sl-components/_icons-modal.scss */
 .modal-body {
   padding-top: 8px;
 }
 
-/* line 50, ../sass/sl-components/_icons-modal.scss */
+/* line 55, ../sass/sl-components/_icons-modal.scss */
 .close {
   opacity: 0.5;
 }
 
-/* line 54, ../sass/sl-components/_icons-modal.scss */
+/* line 59, ../sass/sl-components/_icons-modal.scss */
 .icon-list {
   list-style: none;
   list-style-image: none;
@@ -3848,32 +3913,32 @@ h1.object-title:hover,
   display: table;
   clear: both;
 }
-/* line 63, ../sass/sl-components/_icons-modal.scss */
+/* line 68, ../sass/sl-components/_icons-modal.scss */
 .icon-list li {
   position: relative;
   float: left;
   padding-right: 40px;
 }
-/* line 67, ../sass/sl-components/_icons-modal.scss */
+/* line 72, ../sass/sl-components/_icons-modal.scss */
 .icon-list li.youtube, .icon-list li.slides {
   padding-right: 0;
 }
 
-/* line 74, ../sass/sl-components/_icons-modal.scss */
+/* line 79, ../sass/sl-components/_icons-modal.scss */
 .icon-text {
   text-align: center;
   font-size: 13px;
 }
 
-/* line 79, ../sass/sl-components/_icons-modal.scss */
+/* line 84, ../sass/sl-components/_icons-modal.scss */
 .icon-link {
   display: block;
-  height: 61px;
-  width: 52px;
+  height: 82px;
+  width: 70px;
   text-decoration: none;
 }
 
-/* line 86, ../sass/sl-components/_icons-modal.scss */
+/* line 91, ../sass/sl-components/_icons-modal.scss */
 .photos, .docs, .slides {
   margin-top: 16px;
 }
