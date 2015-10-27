@@ -34,6 +34,18 @@
         $('#icons button.close').click(function() {
             $('#icons').fadeOut("fast");
         });
+
+        $('.front .halflings-th').click(function() {
+            $('#icons').fadeIn("fast");
+        });
+        $('#icons-mobile button.close').click(function() {
+            $('#icons-mobile').fadeOut("fast");
+        });
+
+        $('.front .halflings-th').click(function() {
+            $('#icons-mobile').fadeIn("fast");
+        });
+
     });
 })(jQuery);
 

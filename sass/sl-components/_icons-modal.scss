@@ -17,7 +17,7 @@ $assets-sprite-base-class: ".asset";
 .region-highlighted .modal {
     @include breakpoint($max1199)
      {
-        display: none;
+        display: none !important;
     }
 }
 @media screen and (max-height: 610px) {
@@ -180,4 +180,8 @@ $assets-sprite-base-class: ".asset";
 
 .slides a:hover {
     @extend .assets-icon_slides_hover;
+}
+
+.modal-backdrop {
+    display: none !important;
 }

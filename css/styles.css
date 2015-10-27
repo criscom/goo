@@ -3417,6 +3417,12 @@ li a,
 }
 
 /* line 17, ../sass/sl-components/_favorites.scss */
+#block-block-7 {
+  margin-bottom: 64px;
+  margin-bottom: 4rem;
+}
+
+/* line 22, ../sass/sl-components/_favorites.scss */
 .favorites {
   margin-top: 64px;
   margin-top: 4rem;
@@ -3428,21 +3434,21 @@ li a,
   justify-content: center;
 }
 @media (min-width: 0px) and (max-width: 480px) {
-  /* line 17, ../sass/sl-components/_favorites.scss */
+  /* line 22, ../sass/sl-components/_favorites.scss */
   .favorites {
     display: none;
   }
 }
-/* line 29, ../sass/sl-components/_favorites.scss */
+/* line 34, ../sass/sl-components/_favorites.scss */
 .favorites li {
   padding-right: 12px;
   padding-right: 0.75rem;
 }
-/* line 32, ../sass/sl-components/_favorites.scss */
+/* line 37, ../sass/sl-components/_favorites.scss */
 .favorites li.favorites-fav_06 {
   padding-right: 0;
 }
-/* line 35, ../sass/sl-components/_favorites.scss */
+/* line 40, ../sass/sl-components/_favorites.scss */
 .favorites li a {
   display: block;
   border: 0;
@@ -3583,28 +3589,27 @@ h1.object-title:hover,
   margin-left: 12px;
 }
 
-@media (min-width: 1200px) {
-  /* line 57, ../sass/sl-components/_footer.scss */
-  #page {
-    min-height: 100%;
-    position: relative;
-  }
-
-  /* line 62, ../sass/sl-components/_footer.scss */
-  #main {
-    padding-bottom: 41px;
-  }
-
-  /* line 66, ../sass/sl-components/_footer.scss */
-  .footer {
-    position: fixed;
-    z-index: 1100;
-    bottom: 0;
-    width: 100%;
-    height: 41px;
-    /* Height of the footer */
-  }
+/* line 57, ../sass/sl-components/_footer.scss */
+#page {
+  min-height: 100%;
+  position: relative;
 }
+
+/* line 62, ../sass/sl-components/_footer.scss */
+#main {
+  padding-bottom: 41px;
+}
+
+/* line 66, ../sass/sl-components/_footer.scss */
+.footer {
+  position: fixed;
+  z-index: 1100;
+  bottom: 0;
+  width: 100%;
+  height: 41px;
+  /* Height of the footer */
+}
+
 /* CSS code for frontpage
 ** VIEWS page
 ** Blocks added in context module
@@ -3889,7 +3894,7 @@ h1.object-title:hover,
 @media (max-width: 1199px) {
   /* line 17, ../sass/sl-components/_icons-modal.scss */
   .region-highlighted .modal {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -4073,6 +4078,11 @@ h1.object-title:hover,
 /* line 155, ../sass/sl-components/_icons-modal.scss */
 .photos, .docs, .slides {
   margin-top: 16px;
+}
+
+/* line 185, ../sass/sl-components/_icons-modal.scss */
+.modal-backdrop {
+  display: none !important;
 }
 
 /* styles for isotope filter and isotope views like events/reisen */
