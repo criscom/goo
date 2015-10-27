@@ -18,9 +18,12 @@
     margin: 0;
     margin-top: 3px;
     margin-top: 0.1875rem;
-    
-    padding: 12px 2px 12px 12px;
-    padding: .75rem 0.125rem .75rem .75rem;
+    padding: 12px 20px 12px 12px;
+    padding: .75rem 1.25rem .75rem .75rem;
+    @include breakpoint($range0-480) {
+        padding-right: 0;
+        padding-left: 0;
+    }
     a {
             color: black;
             opacity: 0.75;

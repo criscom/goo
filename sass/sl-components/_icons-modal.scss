@@ -14,11 +14,51 @@ $assets-sprite-base-class: ".asset";
 @import 'assets/*.png';
 @include all-assets-sprites;
 
+.region-highlighted .modal {
+    @include breakpoint($max1199)
+     {
+        display: none;
+    }
+}
+@media screen and (max-height: 610px) {
+    .region-highlighted .modal {
+        display: none;
+    }
+}
+
+#block-block-8 {
+    .modal { 
+        @include breakpoint($xlarge) {
+            display: none; // hide mobile icon modal on large screens
+        }
+        position: relative;
+    }
+}
+
 .modal {
     display: inherit;
     left: inherit;
     bottom: inherit;
-    top: 90px;
+    top: inherit;
+    right: inherit;
+    @include breakpoint ($max1199){
+        width: 100%;
+        overflow: visible;
+        bottom: 0;
+    }
+    @include breakpoint($xlarge){
+        top: 112px;
+        top: 7rem;
+        right: 0;
+    }
+}
+
+.modal-sm {
+        width: 100%;
+        @include breakpoint($xlarge){
+            width: 276px;
+            width: 17.25rem;
+        }
 }
 
 .modal-backdrop {
@@ -30,7 +70,14 @@ $assets-sprite-base-class: ".asset";
 
 .modal-content {
     @include border-radius(0);
-    @include box-shadow(none);
+    @include breakpoint($xlarge){    
+        @include box-shadow(none);
+    }
+    @include breakpoint($max1199) {
+        border: none;
+        @include box-shadow(0 -6px 5px 0px rgba(170,170,170,0.2));
+        // box-shadow: (6px 6px black) !important;
+    }
 }
 
 .modal-dialog {
@@ -42,7 +89,7 @@ $assets-sprite-base-class: ".asset";
     margin: 0;
     padding: 8px 8px 0 8px;
     h4 {
-        padding: 26px 48px 0 48px;
+        padding: 26px 28px 0 28px;
         font-size: 13px;
         color: lighten($font-color, 6%)
     }
@@ -60,18 +107,35 @@ $assets-sprite-base-class: ".asset";
     list-style: none;
     list-style-image: none;
     list-style-type: none;
-    padding-left: 16px;
-    padding-left: 1rem;
+    padding-left: 32px;
+    padding-left: 2rem;
     margin-top: 0;
     margin-bottom: 8px;
     @include clearfix();
+    @include breakpoint($max1199) {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        li {
+            &.news,
+            &.maps {
+                margin-top: 16px;
+            }
+        }
+    }
     li {
+        &.youtube {
+            margin-top: 16px;
+        }
+    @include breakpoint($xlarge){
         position: relative;
         float: left;
         padding-right: 40px;
-        &.youtube,
-        &.slides {
-            padding-right: 0;
+            &.maps,
+            &.photos,
+            &.slides {
+                padding-right: 0;
+            }
         }
     }
 }

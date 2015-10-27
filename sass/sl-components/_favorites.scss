@@ -15,12 +15,29 @@ $favorites-sprite-base-class: ".favorites-images";
 @include all-favorites-sprites;
 
 .favorites {
+    margin-top: 64px;
+    margin-top: 4rem;
+    list-style: none;
+    list-style-type: none;
+    list-style-image: none;
     @include display-flex;
-    li a {
-        display: block;
-        @extend .favorites-images;
-        @include hide-text();
-        width: 154px;
-        height: 128px;
+        justify-content: center;
+
+    @include breakpoint($range0-480 ){
+        display: none;
+    }
+    li {
+        padding-right: 12px;
+        padding-right: 0.75rem;
+        &.favorites-fav_06 {
+            padding-right: 0;
+        }
+        a {
+            display: block;
+            @extend .favorites-images;
+            @include hide-text();
+            width: 154px;
+            height: 128px;
+        }
     }
 }

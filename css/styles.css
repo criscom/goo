@@ -3364,6 +3364,12 @@ li a,
 ** added by criscom
 */
 /* line 6, ../sass/sl-components/_default.scss */
+.front .main-content {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 11, ../sass/sl-components/_default.scss */
 .main h1 {
   text-transform: uppercase;
 }
@@ -3412,10 +3418,31 @@ li a,
 
 /* line 17, ../sass/sl-components/_favorites.scss */
 .favorites {
+  margin-top: 64px;
+  margin-top: 4rem;
+  list-style: none;
+  list-style-type: none;
+  list-style-image: none;
   display: -webkit-flex;
   display: flex;
+  justify-content: center;
 }
-/* line 19, ../sass/sl-components/_favorites.scss */
+@media (min-width: 0px) and (max-width: 480px) {
+  /* line 17, ../sass/sl-components/_favorites.scss */
+  .favorites {
+    display: none;
+  }
+}
+/* line 29, ../sass/sl-components/_favorites.scss */
+.favorites li {
+  padding-right: 12px;
+  padding-right: 0.75rem;
+}
+/* line 32, ../sass/sl-components/_favorites.scss */
+.favorites li.favorites-fav_06 {
+  padding-right: 0;
+}
+/* line 35, ../sass/sl-components/_favorites.scss */
 .favorites li a {
   display: block;
   border: 0;
@@ -3502,37 +3529,43 @@ h1.object-title:hover,
   margin: 0;
   border-top: 1px solid #e4e4e4;
 }
-/* line 12, ../sass/sl-components/_footer.scss */
+@media (min-width: 0px) and (max-width: 480px) {
+  /* line 8, ../sass/sl-components/_footer.scss */
+  .footer {
+    display: none;
+  }
+}
+/* line 15, ../sass/sl-components/_footer.scss */
 .footer .block {
   margin-bottom: 0;
 }
-/* line 15, ../sass/sl-components/_footer.scss */
+/* line 18, ../sass/sl-components/_footer.scss */
 .footer .footer-menu-wrapper {
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 20, ../sass/sl-components/_footer.scss */
+/* line 23, ../sass/sl-components/_footer.scss */
 .footer a {
   font-size: 13px;
   color: #575757;
   font-weight: 300 !important;
   text-decoration: none;
 }
-/* line 25, ../sass/sl-components/_footer.scss */
+/* line 28, ../sass/sl-components/_footer.scss */
 .footer a:hover {
   color: #575757;
   text-decoration: underline;
 }
-/* line 30, ../sass/sl-components/_footer.scss */
+/* line 33, ../sass/sl-components/_footer.scss */
 .footer .menu {
   display: -webkit-flex;
   display: flex;
   padding-left: 0;
   margin: 8px 0;
 }
-/* line 34, ../sass/sl-components/_footer.scss */
+/* line 37, ../sass/sl-components/_footer.scss */
 .footer .menu li {
   list-style: none;
   list-style-image: none;
@@ -3540,36 +3573,38 @@ h1.object-title:hover,
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 40, ../sass/sl-components/_footer.scss */
+/* line 43, ../sass/sl-components/_footer.scss */
 .footer .menu li.last {
   padding-right: 0;
 }
 
-/* line 47, ../sass/sl-components/_footer.scss */
+/* line 50, ../sass/sl-components/_footer.scss */
 .footer-menu-1 {
   margin-left: 12px;
 }
 
-/* line 53, ../sass/sl-components/_footer.scss */
-#page {
-  min-height: 100%;
-  position: relative;
-}
+@media (min-width: 1200px) {
+  /* line 57, ../sass/sl-components/_footer.scss */
+  #page {
+    min-height: 100%;
+    position: relative;
+  }
 
-/* line 58, ../sass/sl-components/_footer.scss */
-#main {
-  padding-bottom: 41px;
-}
+  /* line 62, ../sass/sl-components/_footer.scss */
+  #main {
+    padding-bottom: 41px;
+  }
 
-/* line 62, ../sass/sl-components/_footer.scss */
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 41px;
-  /* Height of the footer */
+  /* line 66, ../sass/sl-components/_footer.scss */
+  .footer {
+    position: fixed;
+    z-index: 1100;
+    bottom: 0;
+    width: 100%;
+    height: 41px;
+    /* Height of the footer */
+  }
 }
-
 /* CSS code for frontpage
 ** VIEWS page
 ** Blocks added in context module
@@ -3587,25 +3622,31 @@ h1.object-title:hover,
   margin-top: 27px;
 }
 
-/* line 23, ../sass/sl-components/_front.scss */
+/* line 22, ../sass/sl-components/_front.scss */
 .front div.form-item-keys-3 {
   margin-top: 25px;
   margin-top: 1.5625rem;
   margin-bottom: 32px;
   margin-bottom: 2rem;
 }
-/* line 29, ../sass/sl-components/_front.scss */
+/* line 28, ../sass/sl-components/_front.scss */
 .front input.form-text {
   width: 570px;
   height: 38px;
   outline: none;
 }
-/* line 33, ../sass/sl-components/_front.scss */
+@media (max-width: 768px) {
+  /* line 28, ../sass/sl-components/_front.scss */
+  .front input.form-text {
+    width: 90%;
+  }
+}
+/* line 35, ../sass/sl-components/_front.scss */
 .front input.form-text:focus {
   outline: none;
   border: 1px solid #4d90fe;
 }
-/* line 39, ../sass/sl-components/_front.scss */
+/* line 41, ../sass/sl-components/_front.scss */
 .front input[type="submit"]:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid #c6c6c6;
@@ -3618,7 +3659,7 @@ h1.object-title:hover,
   background-image: linear-gradient(to bottom, #f8f8f8, #f1f1f1);
   background-color: #f8f8f8;
 }
-/* line 49, ../sass/sl-components/_front.scss */
+/* line 51, ../sass/sl-components/_front.scss */
 .front .block-search-api-page .btn-primary {
   border: 1px solid #f2f2f2;
   color: #444;
@@ -3661,31 +3702,38 @@ h1.object-title:hover,
   margin: 0;
   margin-top: 3px;
   margin-top: 0.1875rem;
-  padding: 12px 2px 12px 12px;
-  padding: .75rem 0.125rem .75rem .75rem;
+  padding: 12px 20px 12px 12px;
+  padding: .75rem 1.25rem .75rem .75rem;
 }
-/* line 24, ../sass/sl-components/_header-text.scss */
+@media (min-width: 0px) and (max-width: 480px) {
+  /* line 12, ../sass/sl-components/_header-text.scss */
+  #block-block-3 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* line 27, ../sass/sl-components/_header-text.scss */
 #block-block-3 a {
   color: black;
   opacity: 0.75;
   text-decoration: none;
 }
-/* line 28, ../sass/sl-components/_header-text.scss */
+/* line 31, ../sass/sl-components/_header-text.scss */
 #block-block-3 a:hover {
   color: black;
   text-decoration: underline;
   opacity: 1;
 }
-/* line 34, ../sass/sl-components/_header-text.scss */
+/* line 37, ../sass/sl-components/_header-text.scss */
 #block-block-3 span.block {
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 37, ../sass/sl-components/_header-text.scss */
+/* line 40, ../sass/sl-components/_header-text.scss */
 .not-front #block-block-3 span.block {
   display: none;
 }
-/* line 41, ../sass/sl-components/_header-text.scss */
+/* line 44, ../sass/sl-components/_header-text.scss */
 #block-block-3 span.glyphicons,
 #block-block-3 span.halflings-th {
   top: 6px;
@@ -3695,7 +3743,7 @@ h1.object-title:hover,
   opacity: 1;
   color: #5a5a5a;
 }
-/* line 50, ../sass/sl-components/_header-text.scss */
+/* line 53, ../sass/sl-components/_header-text.scss */
 #block-block-3 .btn-primary {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzODdmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ2ODNlYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -3709,33 +3757,33 @@ h1.object-title:hover,
   margin-left: 24px;
   margin-left: 1.5rem;
 }
-/* line 56, ../sass/sl-components/_header-text.scss */
+/* line 59, ../sass/sl-components/_header-text.scss */
 #block-block-3 .btn a {
   color: white;
   opacity: 1;
   font-weight: bold;
 }
 
-/* line 64, ../sass/sl-components/_header-text.scss */
+/* line 67, ../sass/sl-components/_header-text.scss */
 .header-date {
   color: yellow;
 }
 @media (min-width: 569px) {
-  /* line 64, ../sass/sl-components/_header-text.scss */
+  /* line 67, ../sass/sl-components/_header-text.scss */
   .header-date {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 @media (min-width: 769px) {
-  /* line 64, ../sass/sl-components/_header-text.scss */
+  /* line 67, ../sass/sl-components/_header-text.scss */
   .header-date {
     font-size: 32px;
     font-size: 2rem;
   }
 }
 
-/* line 80, ../sass/sl-components/_header-text.scss */
+/* line 83, ../sass/sl-components/_header-text.scss */
 .region-blockgroup-header-wrapper {
   clear: both;
 }
@@ -3838,67 +3886,133 @@ h1.object-title:hover,
   background-position: -770px 0;
 }
 
-/* line 17, ../sass/sl-components/_icons-modal.scss */
+@media (max-width: 1199px) {
+  /* line 17, ../sass/sl-components/_icons-modal.scss */
+  .region-highlighted .modal {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 610px) {
+  /* line 24, ../sass/sl-components/_icons-modal.scss */
+  .region-highlighted .modal {
+    display: none;
+  }
+}
+/* line 30, ../sass/sl-components/_icons-modal.scss */
+#block-block-8 .modal {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  /* line 30, ../sass/sl-components/_icons-modal.scss */
+  #block-block-8 .modal {
+    display: none;
+  }
+}
+
+/* line 38, ../sass/sl-components/_icons-modal.scss */
 .modal {
   display: inherit;
   left: inherit;
   bottom: inherit;
-  top: 90px;
+  top: inherit;
+  right: inherit;
+}
+@media (max-width: 1199px) {
+  /* line 38, ../sass/sl-components/_icons-modal.scss */
+  .modal {
+    width: 100%;
+    overflow: visible;
+    bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 38, ../sass/sl-components/_icons-modal.scss */
+  .modal {
+    top: 112px;
+    top: 7rem;
+    right: 0;
+  }
 }
 
-/* line 24, ../sass/sl-components/_icons-modal.scss */
+/* line 56, ../sass/sl-components/_icons-modal.scss */
+.modal-sm {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  /* line 56, ../sass/sl-components/_icons-modal.scss */
+  .modal-sm {
+    width: 276px;
+    width: 17.25rem;
+  }
+}
+
+/* line 64, ../sass/sl-components/_icons-modal.scss */
 .modal-backdrop {
   background-color: transparent;
 }
-/* line 26, ../sass/sl-components/_icons-modal.scss */
+/* line 66, ../sass/sl-components/_icons-modal.scss */
 .modal-backdrop.in {
   opacity: 0;
 }
 
-/* line 31, ../sass/sl-components/_icons-modal.scss */
+/* line 71, ../sass/sl-components/_icons-modal.scss */
 .modal-content {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+}
+@media (min-width: 1200px) {
+  /* line 71, ../sass/sl-components/_icons-modal.scss */
+  .modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 71, ../sass/sl-components/_icons-modal.scss */
+  .modal-content {
+    border: none;
+    -webkit-box-shadow: 0 -6px 5px 0px rgba(170, 170, 170, 0.2);
+    box-shadow: 0 -6px 5px 0px rgba(170, 170, 170, 0.2);
+  }
 }
 
-/* line 36, ../sass/sl-components/_icons-modal.scss */
+/* line 83, ../sass/sl-components/_icons-modal.scss */
 .modal-dialog {
   margin: 0 30px 0 0;
 }
 
-/* line 40, ../sass/sl-components/_icons-modal.scss */
+/* line 87, ../sass/sl-components/_icons-modal.scss */
 .modal-header {
   border-bottom: 0;
   margin: 0;
   padding: 8px 8px 0 8px;
 }
-/* line 44, ../sass/sl-components/_icons-modal.scss */
+/* line 91, ../sass/sl-components/_icons-modal.scss */
 .modal-header h4 {
-  padding: 26px 48px 0 48px;
+  padding: 26px 28px 0 28px;
   font-size: 13px;
   color: #4f4f4f;
 }
 
-/* line 51, ../sass/sl-components/_icons-modal.scss */
+/* line 98, ../sass/sl-components/_icons-modal.scss */
 .modal-body {
   padding-top: 8px;
 }
 
-/* line 55, ../sass/sl-components/_icons-modal.scss */
+/* line 102, ../sass/sl-components/_icons-modal.scss */
 .close {
   opacity: 0.5;
 }
 
-/* line 59, ../sass/sl-components/_icons-modal.scss */
+/* line 106, ../sass/sl-components/_icons-modal.scss */
 .icon-list {
   list-style: none;
   list-style-image: none;
   list-style-type: none;
-  padding-left: 16px;
-  padding-left: 1rem;
+  padding-left: 32px;
+  padding-left: 2rem;
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -3913,24 +4027,42 @@ h1.object-title:hover,
   display: table;
   clear: both;
 }
-/* line 68, ../sass/sl-components/_icons-modal.scss */
-.icon-list li {
-  position: relative;
-  float: left;
-  padding-right: 40px;
+@media (max-width: 1199px) {
+  /* line 106, ../sass/sl-components/_icons-modal.scss */
+  .icon-list {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+  /* line 120, ../sass/sl-components/_icons-modal.scss */
+  .icon-list li.news, .icon-list li.maps {
+    margin-top: 16px;
+  }
 }
-/* line 72, ../sass/sl-components/_icons-modal.scss */
-.icon-list li.youtube, .icon-list li.slides {
-  padding-right: 0;
+/* line 127, ../sass/sl-components/_icons-modal.scss */
+.icon-list li.youtube {
+  margin-top: 16px;
+}
+@media (min-width: 1200px) {
+  /* line 126, ../sass/sl-components/_icons-modal.scss */
+  .icon-list li {
+    position: relative;
+    float: left;
+    padding-right: 40px;
+  }
+  /* line 134, ../sass/sl-components/_icons-modal.scss */
+  .icon-list li.maps, .icon-list li.photos, .icon-list li.slides {
+    padding-right: 0;
+  }
 }
 
-/* line 79, ../sass/sl-components/_icons-modal.scss */
+/* line 143, ../sass/sl-components/_icons-modal.scss */
 .icon-text {
   text-align: center;
   font-size: 13px;
 }
 
-/* line 84, ../sass/sl-components/_icons-modal.scss */
+/* line 148, ../sass/sl-components/_icons-modal.scss */
 .icon-link {
   display: block;
   height: 82px;
@@ -3938,7 +4070,7 @@ h1.object-title:hover,
   text-decoration: none;
 }
 
-/* line 91, ../sass/sl-components/_icons-modal.scss */
+/* line 155, ../sass/sl-components/_icons-modal.scss */
 .photos, .docs, .slides {
   margin-top: 16px;
 }

@@ -18,7 +18,6 @@
 
 .front {
     .block-search-api-page {
-        // margin-top: 6px;
     }
     div.form-item-keys-3 {
         margin-top: 25px;
@@ -29,6 +28,9 @@
     input.form-text {
         width: 570px;
         height: 38px;
+        @include breakpoint($max768){
+            width: 90%;
+        }
         outline: none;
         &:focus {
             outline: none;

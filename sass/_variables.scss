@@ -139,6 +139,7 @@ $menu-color: $box;
 // Standard min
 $mobile: min-width 0px;
 $tablet: min-width 569px;
+$tablet-iphone5: min-width 568px;
 $desktop: min-width 769px;
 $large: min-width 980px;
 $xlarge: min-width 1200px;
@@ -146,6 +147,7 @@ $xxlarge: min-width 1500px;
 
 // Helper max
 $max1295: max-width 1295px;
+$max1199: max-width 1199px;
 $max979: max-width 979px; // smallscreens
 $max768: max-width 768px; // mobilescreens
 $max568: max-width 568px;
@@ -159,7 +161,7 @@ $range769-961: 769px 961px;
 $range569-768: 569px 768px;
 $range481-568: 481px 568px;
 $range0-480: 0px 480px;
-$range0-568px: 0px 568px;
+$range0-568: 0px 568px;
 
 //iPhone
 $iphone5-6: max-width 767px;
