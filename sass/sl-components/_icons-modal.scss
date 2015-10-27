@@ -1,4 +1,9 @@
-
+/* CSS code for ICONS modal window
+** Blocks added in context module
+** added by criscom
+** /front
+**
+*/
 
 // Image sprites
 
@@ -78,8 +83,8 @@ $assets-sprite-base-class: ".asset";
 
 .icon-link {
     display: block;
-    height: 61px;
-    width: 52px;
+    height: 82px; // 61px;
+    width: 70px; // 52px;
     text-decoration: none;
 }
 

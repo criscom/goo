@@ -1,0 +1,15 @@
+/* CSS code for FAVORITES block
+** Blocks added in context module
+** added by criscom
+** /front
+**
+*/
+
+// Image sprites
+
+// NEW Sprite approach
+$favorites-layout: horizontal;
+// $favorites-spacing: 4px;
+$favorites-sprite-base-class: ".asset";
+@import 'favorites/*.png';
+@include all-favorites-sprites;
