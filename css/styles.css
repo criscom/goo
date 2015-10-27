@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @file
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
@@ -3698,6 +3699,14 @@ h1.object-title:hover,
   padding-left: 1rem;
 }
 
+/* Special CSS code for HOVER effect for the icons modal window on the frontpage
+** author: Philipp Hödl
+** Blocks added in context module
+** added by criscom
+** /front
+**
+*/
+/* hover icon code */
 /* line 136, assets/*.png */
 .asset, .assets-icon_docs_base, .assets-icon_docs_hover, .docs a:hover, .assets-icon_maps_base, .assets-icon_maps_hover, .maps a:hover, .assets-icon_news_base, .assets-icon_news_hover, .news a:hover, .assets-icon_photos_base, .assets-icon_photos_hover, .photos a:hover, .assets-icon_slides_base, .assets-icon_slides_hover, .slides a:hover, .assets-icon_youtube_base, .assets-icon_youtube_hover, .youtube a:hover {
   background-image: url('../images/assets-s7c84671775.png');
