@@ -3430,8 +3430,10 @@ li a,
   list-style-type: none;
   list-style-image: none;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 @media (min-width: 0px) and (max-width: 480px) {
@@ -3440,16 +3442,16 @@ li a,
     display: none;
   }
 }
-/* line 35, ../sass/sl-components/_favorites.scss */
+/* line 38, ../sass/sl-components/_favorites.scss */
 .favorites li {
   padding-right: 12px;
   padding-right: 0.75rem;
 }
-/* line 38, ../sass/sl-components/_favorites.scss */
+/* line 41, ../sass/sl-components/_favorites.scss */
 .favorites li.favorites-fav_06 {
   padding-right: 0;
 }
-/* line 41, ../sass/sl-components/_favorites.scss */
+/* line 44, ../sass/sl-components/_favorites.scss */
 .favorites li a {
   display: block;
   border: 0;
@@ -3549,30 +3551,33 @@ h1.object-title:hover,
 /* line 18, ../sass/sl-components/_footer.scss */
 .footer .footer-menu-wrapper {
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-/* line 23, ../sass/sl-components/_footer.scss */
+/* line 26, ../sass/sl-components/_footer.scss */
 .footer a {
   font-size: 13px;
   color: #575757;
   font-weight: 300 !important;
   text-decoration: none;
 }
-/* line 28, ../sass/sl-components/_footer.scss */
+/* line 31, ../sass/sl-components/_footer.scss */
 .footer a:hover {
   color: #575757;
   text-decoration: underline;
 }
-/* line 33, ../sass/sl-components/_footer.scss */
+/* line 36, ../sass/sl-components/_footer.scss */
 .footer .menu {
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
   margin: 8px 0;
 }
-/* line 37, ../sass/sl-components/_footer.scss */
+/* line 42, ../sass/sl-components/_footer.scss */
 .footer .menu li {
   list-style: none;
   list-style-image: none;
@@ -3580,28 +3585,28 @@ h1.object-title:hover,
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 43, ../sass/sl-components/_footer.scss */
+/* line 48, ../sass/sl-components/_footer.scss */
 .footer .menu li.last {
   padding-right: 0;
 }
 
-/* line 50, ../sass/sl-components/_footer.scss */
+/* line 55, ../sass/sl-components/_footer.scss */
 .footer-menu-1 {
   margin-left: 12px;
 }
 
-/* line 57, ../sass/sl-components/_footer.scss */
+/* line 62, ../sass/sl-components/_footer.scss */
 #page {
   min-height: 100%;
   position: relative;
 }
 
-/* line 62, ../sass/sl-components/_footer.scss */
+/* line 67, ../sass/sl-components/_footer.scss */
 #main {
   padding-bottom: 41px;
 }
 
-/* line 66, ../sass/sl-components/_footer.scss */
+/* line 71, ../sass/sl-components/_footer.scss */
 .footer {
   position: fixed;
   z-index: 1100;
@@ -4037,40 +4042,42 @@ h1.object-title:hover,
   /* line 106, ../sass/sl-components/_icons-modal.scss */
   .icon-list {
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding-left: 0;
   }
-  /* line 121, ../sass/sl-components/_icons-modal.scss */
+  /* line 124, ../sass/sl-components/_icons-modal.scss */
   .icon-list li.news, .icon-list li.maps {
     margin-top: 16px;
   }
 }
-/* line 128, ../sass/sl-components/_icons-modal.scss */
+/* line 131, ../sass/sl-components/_icons-modal.scss */
 .icon-list li.youtube {
   margin-top: 16px;
 }
 @media (min-width: 1200px) {
-  /* line 127, ../sass/sl-components/_icons-modal.scss */
+  /* line 130, ../sass/sl-components/_icons-modal.scss */
   .icon-list li {
     position: relative;
     float: left;
     padding-right: 40px;
   }
-  /* line 135, ../sass/sl-components/_icons-modal.scss */
+  /* line 138, ../sass/sl-components/_icons-modal.scss */
   .icon-list li.maps, .icon-list li.photos, .icon-list li.slides {
     padding-right: 0;
   }
 }
 
-/* line 144, ../sass/sl-components/_icons-modal.scss */
+/* line 147, ../sass/sl-components/_icons-modal.scss */
 .icon-text {
   text-align: center;
   font-size: 13px;
 }
 
-/* line 149, ../sass/sl-components/_icons-modal.scss */
+/* line 152, ../sass/sl-components/_icons-modal.scss */
 .icon-link {
   display: block;
   height: 82px;
@@ -4078,12 +4085,12 @@ h1.object-title:hover,
   text-decoration: none;
 }
 
-/* line 156, ../sass/sl-components/_icons-modal.scss */
+/* line 159, ../sass/sl-components/_icons-modal.scss */
 .photos, .docs, .slides {
   margin-top: 16px;
 }
 
-/* line 186, ../sass/sl-components/_icons-modal.scss */
+/* line 189, ../sass/sl-components/_icons-modal.scss */
 .modal-backdrop {
   display: none !important;
 }
