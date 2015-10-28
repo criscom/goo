@@ -16,9 +16,12 @@
         margin-bottom: 0;
     }
     .footer-menu-wrapper {
-        @include display-flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-justify-content: space-between;
-        justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     a {
         font-size: 13px;
@@ -31,7 +34,9 @@
         }
     }
     .menu {
-        @include display-flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         padding-left: 0;
         margin: 8px 0;
         li {

@@ -113,9 +113,12 @@ $assets-sprite-base-class: ".asset";
     margin-bottom: 8px;
     @include clearfix();
     @include breakpoint($max1199) {
-        @include display-flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-justify-content: space-around;
-        justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
         padding-left: 0;
         li {
             &.news,
