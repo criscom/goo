@@ -14,12 +14,20 @@ $assets-sprite-base-class: ".asset";
 @import 'assets/*.png';
 @include all-assets-sprites;
 
-.region-highlighted .modal {
+.region-highlighted .modal { // hide #icons on screens smaller than 1200px
     @include breakpoint($max1199)
      {
         display: none !important;
     }
 }
+
+@include breakpoint($xlarge)
+{
+    #icons-mobile {
+        display: none!important;
+    }
+}
+
 @media screen and (max-height: 610px) {
     .region-highlighted .modal {
         display: none;
