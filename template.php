@@ -102,13 +102,14 @@ function master2015_form_alter(&$form, &$form_state, $form_id) {
   
     unset($form['search_api_page_search_form_home']['#title']);
     
-    $form['keys_1']['#title_display'] = 'invisible';
-    $form_default = t('');
-    $form['keys_1']['#default_value'] = $form_default;
+    $form['keys_3']['#title_display'] = 'invisible';
+    // $form_default = t('Hi. How might we direct you?');
+    // $form['keys_3']['#default_value'] = $form_default;
     // $form['submit_1'] = array('#type' => 'image_button', '#src' => base_path() . drupal_get_path('theme', 'einstern_2014') . '/images/search_icon.png', '#alt' => 'search', '#prefix' => '<div class="form-actions">', '#suffix' => '</div>');
-    $form['keys_1']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}" );
+    $form_default = "Hi. How might we direct you?";
+    $form['keys_3']['#attributes'] = array('placeholder' => $form_default,  'onblur' => "if (this.placeholder == '') {this.placeholder = '{$form_default}';}", 'onfocus' => "if (this.placeholder == '{$form_default}') {this.placeholder = '';}" );
     // $form['submit_1'] = array('#prefix' => '<div class="form-actions criscom">', '#suffix' => '</div>');
-    $form['submit_1']['#value'] = t('Google Search'); // Change the text on the submit button
+    $form['submit_3']['#value'] = t('Google Search'); // Change the text on the submit button
     // $form['submit_2']['#value'] = t('I am feeling lucky');
     // dpm($form);
 }
@@ -118,9 +119,9 @@ function master2015_form_alter(&$form, &$form_state, $form_id) {
   
     unset($form['search_api_page_search_form_results']['#title']);
     
-    $form['keys_2']['#title_display'] = 'invisible';
+    $form['keys_4']['#title_display'] = 'invisible';
     $form_default = t('');
-    $form['keys_2']['#default_value'] = $form_default;
+    $form['keys_4']['#default_value'] = $form_default;
     // $form['submit_2'] = array('#type' => 'image_button', '#src' => base_path() . drupal_get_path('theme', 'master2015') . '/images/nav_logo195.png', '#alt' => 'search', '#prefix' => '<div class="form-actions">', '#suffix' => '</div>');
     
     // $form['submit_2'] = array('#type' => 'image_button', '#prefix' => '<div class="form-actions"><span class="glyphicons glyphicons-search">', '#suffix' => '</span></div>');
@@ -132,14 +133,14 @@ function master2015_form_alter(&$form, &$form_state, $form_id) {
 
 
         // Hide the default button from display.
-        $form['submit_2']['#attributes']['class'][] = 'element-invisible';
+        $form['submit_4']['#attributes']['class'][] = 'element-invisible';
          // Implement a theme wrapper to add a submit button containing a search
         // icon directly after the input element.
-        $form['keys_2']['#theme_wrappers'] = array('master2015_search_form_wrapper');
-        $form['keys_2']['#title'] = '';
+        $form['keys_4']['#theme_wrappers'] = array('master2015_search_form_wrapper');
+        $form['keys_4']['#title'] = '';
         //control the width of the input           
-        $form['keys_2']['#attributes']['class'][] = 'wide input';
-        $form['keys_2']['#attributes']['placeholder'] = t('');
+        $form['keys_4']['#attributes']['class'][] = 'wide input';
+        $form['keys_4']['#attributes']['placeholder'] = t('');
   }
 }
 
@@ -148,7 +149,7 @@ function master2015_master2015_search_form_wrapper($variables) {
   $output .= $variables['element']['#children'];
   $output .= '<button type="submit" class="medium primary btn">';
   $output .= '<span class="glyphicons glyphicons-search"></span>';
-  $output .= '<span class="element-invisible">' . t('Search') . '</span>';
+  $output .= '<span class="element-invisible">' . t('Google Search') . '</span>';
   $output .= '</button>';
   $output .= '</div>';
   return $output;
