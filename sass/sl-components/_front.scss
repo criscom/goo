@@ -70,3 +70,18 @@
         }
     }
 }
+input.form-text::-webkit-input-placeholder {
+   color: #D9D9D9;
+}
+
+input.form-text:-moz-placeholder { /* Firefox 18- */
+   color: #D9D9D9;  
+}
+
+input.form-text::-moz-placeholder {  /* Firefox 19+ */
+   color: #D9D9D9;  
+}
+
+input.form-text:-ms-input-placeholder {  
+   color: #D9D9D9;  
+}
