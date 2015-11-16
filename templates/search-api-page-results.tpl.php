@@ -47,8 +47,8 @@
     </ol>
     <?php print render($pager); ?>
   <?php else : ?>
-    <h2><?php print '"'.$keys.'"' . t(' yielded no results.');?></h2>
-    <h3><?php print t('Google is interested in a collaboration with <strong>Paperwhite Studio</strong> right now.');?></h3>
+    <h2><?php print t('There is no ') . '"'.$keys.'"' . t(' here,');?></h2>
+    <h3><?php print t('but we think you would be more interested in what <strong>Paperwhite Studio</strong> can do for Google anyway.');?></h3>
     <!-- <?php print $no_results_help; ?> -->
     <ul>
       <li><a href="http://www.paperwhite-studio.com/case-studies/" target="_blank">Capabilities</a></li>
