@@ -117,6 +117,12 @@
 }
 
 .section-search {
+    .messages--warning, .messages, .warning {
+        display: none;
+    }
+}
+
+.section-search {
     .main {
         padding-top: 44px;
     }
